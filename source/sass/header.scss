@@ -170,24 +170,24 @@
     background: url("../img/triangle-group.svg") 70% 0 no-repeat, $dark-grey url("../img/header-background-desktop.png") 0 0/100% 100% no-repeat;
   
     .container {
-      width: 1014px;
       padding-left: 10px;
     }
   }
 
   .header__text-wrap {
     min-width: auto;
-    max-width: 470px;
+    max-width: 460px;
 
     p+a {
       padding: 18px 25px;
+      width: calc(100% - 140px);
     }
   }
 
   .header__img-wrap {
     &--desktop {
       min-width: auto;
-      max-width: 470px;
+      max-width: 460px;
     }
   }
 
