@@ -1,9 +1,13 @@
 .about-us {
-  padding-top: 112px;
-  background: url('../img/triangle-left-top.svg') 12.9% 5.3% no-repeat,
-    url('../img/triangle-left-bottom.svg') 0 152% no-repeat,
-    url('../img/triangle-center.svg') 54.2% 50% no-repeat,
+  background: url('../img/triangle-left-top.svg') 12.9% 5% no-repeat,
+    url('../img/triangle-left-bottom.svg') 0 114% no-repeat,
+    url('../img/triangle-center.svg') 54.2% 38% no-repeat,
     url('../img/triangle-right.svg') 99.3% 47% no-repeat;
+  
+  .container {
+    padding-top: 112px;
+    padding-bottom: 97px;
+  }
 
   ul {
     display: flex;
@@ -56,6 +60,19 @@
 
     span+p {
       color: $white;
+    }
+  }
+
+  &--one {
+    svg {
+      margin-bottom: 17px;
+    }
+  }
+
+  &--three {
+    svg {
+      position: relative;
+      top: 3px;
     }
   }
 }
@@ -130,8 +147,12 @@
 
 @media (max-width: $desktop-width - 1px) {
   .about-us {
-    padding-top: 54px;
-    background: url('../img/triangle-center.svg') -202.6% 41% no-repeat;
+    background: url('../img/triangle-center.svg') -202.6% 38% no-repeat;
+
+    .container {
+      padding-top: 54px;
+      padding-bottom: 20px;
+    }
 
     ul {
       margin-left: auto;
@@ -163,6 +184,23 @@
 
     &:nth-child(2n) {
       margin-right: -5px;
+    }
+
+    &--one {
+      svg {
+        margin-bottom: 5px;
+      }
+    }
+
+    &--three {
+      svg {
+        left: -3px;
+        top: 1px;
+      }
+
+      span {
+        margin-bottom: 17px;
+      }
     }
 
     &--three,
@@ -247,8 +285,13 @@
 
 @media (max-width: $table-width - 1) {
   .about-us {
-    padding-top: 37px;
     background: url('../img/triangle-center.svg') 22% 66.7% no-repeat;
+
+    .container {
+      padding-top: 37px;
+      padding-bottom: 0;
+      margin-bottom: -55px;
+    }
 
     span {
       font-size: 20px;
@@ -281,17 +324,36 @@
     }
 
     &--one {
+      svg {
+        margin-bottom: 10px;
+      }
+
       p {
         margin-right: 0;
       }
     }
 
+    &--two {
+      svg {
+        margin-bottom: 12px;
+      }
+    }
+    
     &--three {
       height: 183px;
+
+      svg {
+        top: -2px;
+        margin-bottom: 8px;
+      }
     }
 
     &--four {
       height: 193px;
+
+      span {
+        margin-bottom: 19px;
+      }
 
       p {
         margin-right: -10px;
