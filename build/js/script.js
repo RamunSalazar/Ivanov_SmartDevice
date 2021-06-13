@@ -3,6 +3,10 @@ const footerNavWrapElement = document.querySelector('.footer__nav-wrap');
 const footerAddressWrapElement = document.querySelector('.footer__address-wrap');
 const spanFooterNavWrapElement = footerNavWrapElement.querySelector('span');
 const spanFooterAddressWrapElement = footerAddressWrapElement.querySelector('span');
+const feedbackFormWrapElement = document.querySelector('.feedback__form-wrap');
+const inputTypeTelElement = feedbackFormWrapElement.querySelector('input[type="tel"]');
+
+const PHONE_LENGHT = 6;
 
 footerNavWrapElement.classList.remove('footer__nav-wrap--nojs');
 footerAddressWrapElement.classList.remove('footer__address-wrap--nojs');
@@ -29,5 +33,15 @@ spanFooterAddressWrapElement.addEventListener('click', () => {
   
   if (footerNavWrapElement.classList.contains('footer__nav-wrap--open')) {
     footerNavWrapElement.classList.remove('footer__nav-wrap--open');
+  }
+})
+
+inputTypeTelElement.addEventListener('focus', () => {
+  inputTypeTelElement.value= "+7(";
+})
+
+inputTypeTelElement.addEventListener('input', () => {
+  if (String(inputTypeTelElement.value).length === PHONE_LENGHT) {
+    inputTypeTelElement.value = String(inputTypeTelElement.value) + ')';
   }
 })
