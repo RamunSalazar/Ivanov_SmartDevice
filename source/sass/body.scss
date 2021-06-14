@@ -9,3 +9,9 @@ body {
   font-family: 'PT Mono', 'Courier', monospace;
   font-weight: 400;
 }
+
+.body {
+  &--modal-open {
+    overflow: hidden;
+  }
+}
