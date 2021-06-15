@@ -3,11 +3,11 @@
 
   .container {
     padding-top: 58px;
-    padding-bottom: 123px;
+    padding-bottom: 93px;
   }
 
   h2 {
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 36px;
     line-height: 51px;
     font-weight: 400;
@@ -21,10 +21,10 @@
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       width: 63px;
       height: 63px;
-      background: $blue url('../img/arrow.svg') 55% center no-repeat;
+      background: $blue url("../img/arrow.svg") 55% center no-repeat;
       bottom: 4px;
       right: 0;
       z-index: 1;
@@ -36,7 +36,7 @@
     z-index: 1;
     top: 50px;
     left: 44px;
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 20px;
     line-height: 30px;
     color: $white;
@@ -54,6 +54,7 @@
 
   li {
     margin-right: 30px;
+    margin-bottom: 30px;
 
     &:last-child {
       margin-right: 0;
@@ -62,7 +63,6 @@
 }
 
 .services__img-wrap {
-
   img {
     opacity: 0.2;
   }
@@ -122,7 +122,7 @@
 
     a {
       &::before {
-        background: $blue url('../img/arrow.svg') center center no-repeat;
+        background: $blue url("../img/arrow.svg") center center no-repeat;
       }
     }
   }
@@ -140,26 +140,21 @@
   .services__list-item {
     img {
       height: 256px;
+      min-width: 720px;
+      position: relative;
+      left: 3px;
     }
 
-    &--two,
-    &--three {
-      img {
-        min-width: 720px;
-        position: relative;
-        left: 3px;
-      }
-
-      a {
-        &::before {
-          right: -3px;
-        }
+    a {
+      &::before {
+        right: -3px;
       }
     }
 
     &--one {
       span {
         top: 40px;
+        left: 47px;
       }
     }
 
@@ -223,20 +218,13 @@
 
   .services__list-item {
     img {
-      min-width: 291px;
+      min-width: 290px;
+      left: 1px;
     }
 
-    &--two,
-    &--three {
-      img {
-        min-width: 290px;
-        left: 1px;
-      }
-
-      a {
-        &::before {
-          right: -1px;
-        }
+    a {
+      &::before {
+        right: -1px;
       }
     }
 

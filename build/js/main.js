@@ -32,7 +32,6 @@ spanFooterNavWrapElement.addEventListener('click', () => {
   } else {
     footerNavWrapElement.classList.add('footer__nav-wrap--open');
   }
-  
 
   if (footerAddressWrapElement.classList.contains('footer__address-wrap--open')) {
     footerAddressWrapElement.classList.remove('footer__address-wrap--open');
@@ -45,14 +44,14 @@ spanFooterAddressWrapElement.addEventListener('click', () => {
   } else {
     footerAddressWrapElement.classList.add('footer__address-wrap--open');
   }
-  
+
   if (footerNavWrapElement.classList.contains('footer__nav-wrap--open')) {
     footerNavWrapElement.classList.remove('footer__nav-wrap--open');
   }
 });
 
 inputTypeTelElement.addEventListener('focus', () => {
-  inputTypeTelElement.value= "+7(";
+  inputTypeTelElement.value = '+7(';
 });
 
 window.addEventListener('keydown', (evt) => {
@@ -65,7 +64,7 @@ window.addEventListener('keydown', (evt) => {
 
 inputTypeTelElement.addEventListener('input', () => {
   if (String(inputTypeTelElement.value).length === PHONE_LENGHT_TWO) {
-    inputTypeTelElement.value = String(inputTypeTelElement.value) + '(' ;
+    inputTypeTelElement.value = String(inputTypeTelElement.value) + '(';
   }
 
   if (String(inputTypeTelElement.value).length === PHONE_LENGHT_SIX) {
@@ -129,28 +128,27 @@ headerFeedbackLinkElement.addEventListener('click', (evt) => {
 headerButtonTypeSubmitElement.addEventListener('submit', (evt) => {
   if (headerInputTypeTextElement.value === '' && headerInputTypeTelElement.value === '' && headerTextareaElement.value === '') {
     evt.preventDefault();
-  } else if (headerInputTypeTextElement.value != '' && headerInputTypeTelElement.value === '' && headerTextareaElement.value === '') {
+  } else if (headerInputTypeTextElement.value !== '' && headerInputTypeTelElement.value === '' && headerTextareaElement.value === '') {
     evt.preventDefault();
     localStorage.setItem('name', headerInputTypeTextElement.value);
-  } else if (headerInputTypeTextElement.value === '' && headerInputTypeTelElement.value != '' && headerTextareaElement.value === '') {
+  } else if (headerInputTypeTextElement.value === '' && headerInputTypeTelElement.value !== '' && headerTextareaElement.value === '') {
     evt.preventDefault();
     localStorage.setItem('phone', headerInputTypeTelElement.value);
-  } else if (headerInputTypeTextElement.value === '' && headerInputTypeTelElement.value === '' && headerTextareaElement.value != '') {
+  } else if (headerInputTypeTextElement.value === '' && headerInputTypeTelElement.value === '' && headerTextareaElement.value !== '') {
     evt.preventDefault();
     localStorage.setItem('question', headerTextareaElement.value);
-  } else if (headerInputTypeTextElement.value != '' && headerInputTypeTelElement.value != '' && headerTextareaElement.value === '') {
-    evt.preventDefault();
+  } else if (headerInputTypeTextElement.value !== '' && headerInputTypeTelElement.value !== '' && headerTextareaElement.value === '') {
     localStorage.setItem('name', headerInputTypeTextElement.value);
     localStorage.setItem('phone', headerInputTypeTelElement.value);
-  } else if (headerInputTypeTextElement.value === '' && headerInputTypeTelElement.value != '' && headerTextareaElement.value != '') {
+  } else if (headerInputTypeTextElement.value === '' && headerInputTypeTelElement.value !== '' && headerTextareaElement.value !== '') {
     evt.preventDefault();
     localStorage.setItem('phone', headerInputTypeTelElement.value);
     localStorage.setItem('question', headerTextareaElement.value);
-  } else if (headerInputTypeTextElement.value != '' && headerInputTypeTelElement.value === '' && headerTextareaElement.value != '') {
+  } else if (headerInputTypeTextElement.value !== '' && headerInputTypeTelElement.value === '' && headerTextareaElement.value !== '') {
     evt.preventDefault();
     localStorage.setItem('name', headerInputTypeTextElement.value);
     localStorage.setItem('question', headerTextareaElement.value);
-  } else if (headerInputTypeTextElement.value != '' && headerInputTypeTelElement.value != '' && headerTextareaElement.value != '') {
+  } else if (headerInputTypeTextElement.value !== '' && headerInputTypeTelElement.value !== '' && headerTextareaElement.value !== '') {
     localStorage.setItem('name', headerInputTypeTextElement.value);
     localStorage.setItem('phone', headerInputTypeTelElement.value);
     localStorage.setItem('question', headerTextareaElement.value);

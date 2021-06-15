@@ -12,7 +12,7 @@
 .header__logo {
   margin-left: 3px;
 
-  svg+svg {
+  svg + svg {
     display: none;
   }
 }
@@ -30,7 +30,7 @@
 }
 
 .header__feedback-link {
-  font-family: 'Roboto Condensed', 'Arial', sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -78,7 +78,7 @@
   align-items: flex-start;
 
   h1 {
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 700;
     font-size: 80px;
     line-height: 94px;
@@ -107,8 +107,8 @@
     }
   }
 
-  p+a {
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+  p + a {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
@@ -122,11 +122,11 @@
     margin-bottom: 132px;
   }
 
-  p+a>span+span {
+  p + a > span + span {
     display: none;
   }
 
-  a+a {
+  a + a {
     font-size: 14px;
     line-height: 16px;
     color: $white;
@@ -172,7 +172,7 @@
   }
 
   h2 {
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 400;
     font-size: 28px;
     line-height: 39px;
@@ -191,7 +191,7 @@
 
   input[type="text"],
   input[type="tel"] {
-    font-family: 'PT Mono', 'Courier', monospace;
+    font-family: "PT Mono", "Courier", monospace;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -203,7 +203,7 @@
     width: calc(100% - 42px);
 
     &::placeholder {
-      font-family: 'PT Mono', 'Courier', monospace;
+      font-family: "PT Mono", "Courier", monospace;
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
@@ -212,7 +212,7 @@
   }
 
   textarea {
-    font-family: 'PT Mono', 'Courier', monospace;
+    font-family: "PT Mono", "Courier", monospace;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -225,7 +225,7 @@
     width: calc(100% - 42px);
 
     &::placeholder {
-      font-family: 'PT Mono', 'Courier', monospace;
+      font-family: "PT Mono", "Courier", monospace;
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
@@ -234,7 +234,7 @@
   }
 
   button[type="submit"] {
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -275,27 +275,25 @@
   input[type="checkbox"] + label {
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       width: 14px;
       height: 14px;
       background-color: transparent;
       border: 1px solid $white;
       top: 2px;
-      left: -49px
+      left: -49px;
     }
   }
 
-  input[type="checkbox"] {
-    &:checked + label {
-      &::after {
-        position: absolute;
-        content: '';
-        background: url('../img/check.svg') 0 0 no-repeat;
-        width: 9px;
-        height: 6px;
-        top: 7px;
-        left: -45px;
-      }
+  input[type="checkbox"]:checked {
+    & + label::after {
+      position: absolute;
+      content: "";
+      background: url("../img/check.svg") 0 0 no-repeat;
+      width: 9px;
+      height: 6px;
+      top: 7px;
+      left: -45px;
     }
   }
 }
@@ -327,7 +325,7 @@
 @media (min-width: $desktop-width) and (max-width: $desctop-content-width - 1px) {
   .header {
     background: url("../img/triangle-group.svg") 70% 0 no-repeat, $dark-grey url("../img/header-background-desktop.png") 0 0/100% 100% no-repeat;
-  
+
     .container {
       padding-left: 10px;
     }
@@ -337,7 +335,7 @@
     min-width: auto;
     max-width: 460px;
 
-    p+a {
+    p + a {
       padding: 18px 25px;
       width: calc(100% - 140px);
     }
@@ -368,7 +366,7 @@
     background: url("../img/triangle-group-tablet.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-tablet.png") 0 0 no-repeat;
     background-size: 100%;
     overflow-x: hidden;
-  
+
     .container {
       padding-top: 20px;
       padding-left: 25px;
@@ -376,39 +374,39 @@
       padding-bottom: 163px;
     }
   }
-  
+
   .header__logo {
-    margin-left: 0px;
-  
-    svg+svg {
+    margin-left: 0;
+
+    svg + svg {
       display: none;
     }
   }
-  
+
   .header__links-wrap {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
   }
-  
+
   .header__link {
     span {
       display: none;
     }
   }
-  
+
   .header__feedback-link {
     display: none;
   }
-  
+
   .header__wrap {
     padding-top: 12px;
   }
-  
+
   .header__link-phone {
     margin-left: 33px;
     margin-right: 23px;
-  
+
     svg {
       width: 24px;
       height: 24px;
@@ -416,7 +414,7 @@
       left: auto;
     }
   }
-  
+
   .header__link-mail {
     svg {
       width: 26px;
@@ -425,38 +423,38 @@
       left: auto;
     }
   }
-  
+
   .header__content-wrap {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .header__text-wrap {
     min-width: auto;
     max-width: 430px;
     padding-top: 42px;
     padding-left: 63px;
-  
+
     h1 {
       font-size: 60px;
       line-height: 70px;
       margin-bottom: 11px;
     }
-  
+
     p {
       font-size: 18px;
       line-height: 28px;
       margin-left: 51px;
       margin-bottom: 55px;
-  
+
       &::before {
         width: 33px;
         top: 16px;
         left: -48px;
       }
     }
-  
-    p+a {
+
+    p + a {
       font-size: 16px;
       line-height: 19px;
       margin-left: 51px;
@@ -464,17 +462,17 @@
       margin-bottom: 0;
       width: calc(100% - 103px);
     }
-  
-    a+a {
+
+    a + a {
       display: none;
     }
   }
-  
+
   .header__img-wrap {
     &--desktop {
       display: none;
     }
-  
+
     &--tablet {
       min-width: 260px;
       display: block;
@@ -496,7 +494,7 @@
   .header {
     background: url("../img/triangle-group-mobile.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-mobile.png") 0 0 no-repeat;
     background-size: 100%;
-  
+
     .container {
       padding-top: 17px;
       padding-left: 16px;
@@ -504,39 +502,39 @@
       padding-bottom: 13px;
     }
   }
-  
+
   .header__logo {
     svg {
       display: none;
     }
 
-    svg+svg {
+    svg + svg {
       display: block;
     }
   }
-  
+
   .header__links-wrap {
     margin-bottom: 37px;
   }
-  
+
   .header__link {
     span {
       display: none;
     }
   }
-  
+
   .header__feedback-link {
     display: none;
   }
-  
+
   .header__wrap {
     padding-top: 5px;
   }
-  
+
   .header__link-phone {
     margin-left: 22px;
     margin-right: 0;
-  
+
     svg {
       width: 24px;
       height: 24px;
@@ -544,7 +542,7 @@
       left: auto;
     }
   }
-  
+
   .header__link-mail {
     svg {
       width: 26px;
@@ -553,14 +551,14 @@
       left: auto;
     }
   }
-  
+
   .header__content-wrap {
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
     z-index: 1;
   }
-  
+
   .header__text-wrap {
     max-width: 100%;
     padding-top: 0;
@@ -569,24 +567,24 @@
     top: -57px;
     left: -1px;
     z-index: 2;
-  
+
     h1 {
       font-size: 40px;
       line-height: 47px;
       margin-bottom: 11px;
     }
-  
+
     p {
       font-size: 16px;
       line-height: 25px;
       margin-bottom: 40px;
-  
+
       &::before {
         top: 15px;
       }
     }
-  
-    p+a {
+
+    p + a {
       font-size: 16px;
       line-height: 19px;
       margin-left: 3px;
@@ -595,20 +593,20 @@
       position: relative;
       text-align: center;
     }
-  
-    p+a>span {
+
+    p + a > span {
       display: none;
     }
 
-    p+a>span+span {
+    p + a > span + span {
       display: block;
     }
 
-    a+a {
+    a + a {
       display: none;
     }
   }
-  
+
   .header__img-wrap {
     &--tablet {
       display: none;
@@ -618,7 +616,6 @@
       width: calc(100% + 16px);
       position: relative;
       right: 0;
-      display: block;
       display: flex;
       justify-content: flex-end;
     }

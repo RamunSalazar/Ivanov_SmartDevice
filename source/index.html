@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии. Выполняем срочные заказы и пилотные образцы до 10 дней.">
   <title>HTML Academy: Smart Device</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="css/normalize.css" as="style">
+  <link rel="preload" href="css/style.min.css" as="style">
 </head>
 <body class="body">
   <svg style="display: none">
@@ -140,23 +146,23 @@
         </div>
         <div class="header__img-wrap header__img-wrap--desktop">
           <picture>
-            <source type="image/webp" srcset="img/printed-circuit-board-desktop.webp 1x, img/printed-circuit-board-desktop@2x.webp 2x">
+            <source class="lazyload" type="image/webp" srcset="img/printed-circuit-board-desktop.webp 1x, img/printed-circuit-board-desktop@2x.webp 2x" data-srcset="img/printed-circuit-board-desktop.webp 1x, img/printed-circuit-board-desktop@2x.webp 2x">
             <!-- 1х: 705px; 2x: 1410px -->
-            <img src="img/printed-circuit-board-desktop.png" srcset="img/printed-circuit-board-desktop@2x.png 2x" width="705" height="515" alt="Печатная плата">
+            <img class="lazyload" src="img/printed-circuit-board-desktop.png" data-src="img/printed-circuit-board-desktop.png" srcset="img/printed-circuit-board-desktop@2x.png 2x" data-srcset="img/printed-circuit-board-desktop@2x.png 2x" width="705" height="515" alt="Печатная плата">
           </picture>
         </div>
         <div class="header__img-wrap header__img-wrap--tablet">
           <picture>
-            <source type="image/webp" srcset="img/printed-circuit-board-tablet.webp 1x, img/printed-circuit-board-tablet@2x.webp 2x">
+            <source class="lazyload" type="image/webp" srcset="img/printed-circuit-board-tablet.webp 1x, img/printed-circuit-board-tablet@2x.webp 2x" data-srcset="img/printed-circuit-board-tablet.webp 1x, img/printed-circuit-board-tablet@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
-            <img src="img/printed-circuit-board-tablet.png" srcset="img/printed-circuit-board-tablet@2x.png 2x" width="260" height="340" alt="Печатная плата">
+            <img class="lazyload" src="img/printed-circuit-board-tablet.png" data-src="img/printed-circuit-board-tablet.png" srcset="img/printed-circuit-board-tablet@2x.png 2x" data-srcset="img/printed-circuit-board-tablet@2x.png 2x" width="260" height="340" alt="Печатная плата">
           </picture>
         </div>
         <div class="header__img-wrap header__img-wrap--mobile">
           <picture>
-            <source type="image/webp" srcset="img/printed-circuit-board-mobile.webp 1x, img/printed-circuit-board-mobile@2x.webp 2x">
+            <source class="lazyload" type="image/webp" srcset="img/printed-circuit-board-mobile.webp 1x, img/printed-circuit-board-mobile@2x.webp 2x" data-srcset="img/printed-circuit-board-mobile.webp 1x, img/printed-circuit-board-mobile@2x.webp 2x">
             <!-- 1х: 294px; 2x: 588px -->
-            <img src="img/printed-circuit-board-mobile.png" srcset="img/printed-circuit-board-mobile@2x.png 2x" width="294" height="220" alt="Печатная плата">
+            <img class="lazyload" src="img/printed-circuit-board-mobile.png" data-src="img/printed-circuit-board-mobile.png" srcset="img/printed-circuit-board-mobile@2x.png 2x" data-srcset="img/printed-circuit-board-mobile@2x.png 2x" width="294" height="220" alt="Печатная плата">
           </picture>
         </div>
       </div>
@@ -169,26 +175,24 @@
               <use xlink:href="#close"></use>
             </svg>
           </button>
-          <form>
-            <form>
-              <div>
-                <label class="visually-hidden" for="header-name"></label>
-                <input type="text" id="header-name" placeholder="Имя" required autofocus>
-              </div>
-              <div>
-                <label class="visually-hidden" for="header-phone"></label>
-                <input type="tel" id="header-phone" pattern="\+7\(\d{3}\)\d{7}" max-lenght="14" placeholder="Телефон" required>
-              </div>
-              <div>
-                <label for="header-question"></label>
-                <textarea id="header-question" placeholder="Ваш вопрос"></textarea>
-              </div>
-              <button type="submit">Отправить</button>
-              <div class="header__check-wrap">
-                <input class="visually-hidden" type="checkbox" id="header-check" checked required>
-                <label for="header-check">Я согласен на обработку  персональных данных</label>
-              </div>
-            </form>
+          <form method="post" action="https://echo.htmlacademy.ru">
+            <div>
+              <label class="visually-hidden" for="header-name"></label>
+              <input type="text" id="header-name" placeholder="Имя" required autofocus>
+            </div>
+            <div>
+              <label class="visually-hidden" for="header-phone"></label>
+              <input type="tel" id="header-phone" pattern="\+7\(\d{3}\)\d{7}" maxlength="14" placeholder="Телефон" required>
+            </div>
+            <div>
+              <label for="header-question"></label>
+              <textarea id="header-question" placeholder="Ваш вопрос"></textarea>
+            </div>
+            <button type="submit">Отправить</button>
+            <div class="header__check-wrap">
+              <input class="visually-hidden" type="checkbox" id="header-check" checked required>
+              <label for="header-check">Я согласен на обработку  персональных данных</label>
+            </div>
           </form>
         </div>
       </div>
@@ -202,8 +206,7 @@
             <span>
               <svg width="30" height="37">
                 <use xlink:href="#stopwatch"></use>
-              </svg>
-              Оперативные сроки 
+              </svg>Оперативные сроки
             </span>
             <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
           </li>
@@ -211,8 +214,7 @@
             <span>
               <svg width="32" height="32">
                 <use xlink:href="#hired"></use>
-              </svg>
-              Крупные поставщики 
+              </svg>Крупные поставщики
             </span>
             <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
           </li>
@@ -220,8 +222,7 @@
             <span>
               <svg width="36" height="31">
                 <use xlink:href="#detective"></use>
-              </svg>
-              Полная конфиденциальность
+              </svg>Полная конфиденциальность
             </span>
             <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
           </li>
@@ -229,8 +230,7 @@
             <span>
               <svg width="33" height="32">
                 <use xlink:href="#tag"></use>
-              </svg>
-              Персонализация стоимости
+              </svg>Персонализация стоимости
             </span>
             <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
           </li>
@@ -238,18 +238,16 @@
         <div class="about-us__wrap">
           <div class="about-us__img-wrap about-us__img-wrap--desktop">
             <picture>
-              <source type="image/webp" srcset="img/year.webp 1x, img/year@2x.webp 2x">
+              <source class="lazyload" type="image/webp" srcset="img/year.webp 1x, img/year@2x.webp 2x" data-srcset="img/year.webp 1x, img/year@2x.webp 2x">
               <!-- 1х: 220px; 2x: 440px -->
-              <img src="img/year.png" srcset="img/year@2x.png 2x" width="220" height="317" alt="2005 год">
+              <img class="lazyload" src="img/year.png" data-src="img/year.png" srcset="img/year@2x.png 2x" data-srcset="img/year@2x.png 2x" width="220" height="317" alt="2005 год">
             </picture>
           </div>
           <div class="about-us__img-wrap about-us__img-wrap--tablet">
             <picture>
-              <picture>
-                <source type="image/webp" srcset="img/year-tablet.webp 1x, img/year-tablet@2x.webp 2x">
-                <!-- 1х: 244px; 2x: 488px -->
-                <img src="img/year-tablet.png" srcset="img/year-tablet@2x.png 2x" width="244" height="362" alt="2005 год">
-              </picture>
+              <source class="lazyload" type="image/webp" srcset="img/year-tablet.webp 1x, img/year-tablet@2x.webp 2x" data-srcset="img/year-tablet.webp 1x, img/year-tablet@2x.webp 2x">
+              <!-- 1х: 244px; 2x: 488px -->
+              <img class="lazyload" src="img/year-tablet.png" data-src="img/year-tablet.png" srcset="img/year-tablet@2x.png 2x" data-srcset="img/year-tablet@2x.png 2x" width="244" height="362" alt="2005 год">
             </picture>
           </div>
           <div class="about-us__text-wrap">
@@ -269,23 +267,23 @@
             <a href="#">
               <div class="services__img-wrap services__img-wrap--desktop">
                 <picture>
-                  <source type="image/webp" srcset="img/production-desktop.webp 1x, img/production-desktop@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/production-desktop.webp 1x, img/production-desktop@2x.webp 2x" data-srcset="img/production-desktop.webp 1x, img/production-desktop@2x.webp 2x">
                   <!-- 1х: 370px; 2x: 740px -->
-                  <img src="img/production-desktop.png" srcset="img/production-desktop@2x.png 2x" width="370" height="620" alt="Процесc производства печатных плат">
+                  <img class="lazyload" src="img/production-desktop.png" data-src="img/production-desktop.png" srcset="img/production-desktop@2x.png 2x" data-srcset="img/production-desktop@2x.png 2x" width="370" height="620" alt="Процесc производства печатных плат">
                 </picture>
               </div>
               <div class="services__img-wrap services__img-wrap--tablet">
                 <picture>
-                  <source type="image/webp" srcset="img/production-tablet.webp 1x, img/production-tablet@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/production-tablet.webp 1x, img/production-tablet@2x.webp 2x" data-srcset="img/production-tablet.webp 1x, img/production-tablet@2x.webp 2x">
                   <!-- 1х: 715px; 2x: 1430px -->
-                  <img src="img/production-tablet.png" srcset="img/production-tablet@2x.png 2x" width="715" height="256" alt="Процесc производства печатных плат">
+                  <img class="lazyload" src="img/production-tablet.png" data-src="img/production-tablet.png" srcset="img/production-tablet@2x.png 2x" data-srcset="img/production-tablet@2x.png 2x" width="715" height="256" alt="Процесc производства печатных плат">
                 </picture>
               </div>
               <div class="services__img-wrap services__img-wrap--mobile">
                 <picture>
-                  <source type="image/webp" srcset="img/production-mobile.webp 1x, img/production-mobile@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/production-mobile.webp 1x, img/production-mobile@2x.webp 2x" data-srcset="img/production-mobile.webp 1x, img/production-mobile@2x.webp 2x">
                   <!-- 1х: 290px; 2x: 580px -->
-                  <img src="img/production-mobile.png" srcset="img/production-mobile@2x.png 2x" width="290" height="256" alt="Процесc производства печатных плат">
+                  <img class="lazyload" src="img/production-mobile.png" data-src="img/production-mobile.png" srcset="img/production-mobile@2x.png 2x" data-srcset="img/production-mobile@2x.png 2x" width="290" height="256" alt="Процесc производства печатных плат">
                 </picture>
               </div>
               <span>Производство печатных плат</span>
@@ -295,23 +293,23 @@
             <a href="#">
               <div class="services__img-wrap services__img-wrap--desktop">
                 <picture>
-                  <source type="image/webp" srcset="img/installation-desktop.webp 1x, img/installation-desktop@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/installation-desktop.webp 1x, img/installation-desktop@2x.webp 2x" data-srcset="img/installation-desktop.webp 1x, img/installation-desktop@2x.webp 2x">
                   <!-- 1х: 370px; 2x: 740px -->
-                  <img src="img/installation-desktop.png" srcset="img/installation-desktop@2x.png 2x" width="370" height="620" alt="Процесc монтажа печатных плат">
+                  <img class="lazyload" src="img/installation-desktop.png" data-src="img/installation-desktop.png" srcset="img/installation-desktop@2x.png 2x" data-srcset="img/installation-desktop@2x.png 2x" width="370" height="620" alt="Процесc монтажа печатных плат">
                 </picture>
               </div>
               <div class="services__img-wrap services__img-wrap--tablet">
                 <picture>
-                  <source type="image/webp" srcset="img/installation-tablet.webp 1x, img/installation-tablet@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/installation-tablet.webp 1x, img/installation-tablet@2x.webp 2x" data-srcset="img/installation-tablet.webp 1x, img/installation-tablet@2x.webp 2x">
                   <!-- 1х: 715px; 2x: 1430px -->
-                  <img src="img/installation-tablet.png" srcset="img/installation-tablet@2x.png 2x" width="715" height="256" alt="Процесc монтажа печатных плат">
+                  <img class="lazyload" src="img/installation-tablet.png" data-src="img/installation-tablet.png" srcset="img/installation-tablet@2x.png 2x" data-srcset="img/installation-tablet@2x.png 2x" width="715" height="256" alt="Процесc монтажа печатных плат">
                 </picture>
               </div>
               <div class="services__img-wrap services__img-wrap--mobile">
                 <picture>
-                  <source type="image/webp" srcset="img/installation-mobile.webp 1x, img/installation-mobile@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/installation-mobile.webp 1x, img/installation-mobile@2x.webp 2x" data-srcset="img/installation-mobile.webp 1x, img/installation-mobile@2x.webp 2x">
                   <!-- 1х: 290px; 2x: 580px -->
-                  <img src="img/installation-mobile.png" srcset="img/installation-mobile@2x.png 2x" width="290" height="256" alt="Процесc монтажа печатных плат">
+                  <img class="lazyload" src="img/installation-mobile.png" data-src="img/installation-mobile.png" srcset="img/installation-mobile@2x.png 2x" data-srcset="img/installation-mobile@2x.png 2x" width="290" height="256" alt="Процесc монтажа печатных плат">
                 </picture>
               </div>
               <span>Монтаж печатных плат</span>
@@ -321,23 +319,23 @@
             <a href="#">
               <div class="services__img-wrap services__img-wrap--desktop">
                 <picture>
-                  <source type="image/webp" srcset="img/components-desktop.webp 1x, img/components-desktop@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/components-desktop.webp 1x, img/components-desktop@2x.webp 2x" data-srcset="img/components-desktop.webp 1x, img/components-desktop@2x.webp 2x">
                   <!-- 1х: 370px; 2x: 740px -->
-                  <img src="img/components-desktop.png" srcset="img/components-desktop@2x.png 2x" width="370" height="620" alt="Светодиоды">
+                  <img class="lazyload" src="img/components-desktop.png" data-src="img/components-desktop.png" srcset="img/components-desktop@2x.png 2x" data-srcset="img/components-desktop@2x.png 2x" width="370" height="620" alt="Светодиоды">
                 </picture>
               </div>
               <div class="services__img-wrap services__img-wrap--tablet">
                 <picture>
-                  <source type="image/webp" srcset="img/components-tablet.webp 1x, img/components-tablet@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/components-tablet.webp 1x, img/components-tablet@2x.webp 2x" data-srcset="img/components-tablet.webp 1x, img/components-tablet@2x.webp 2x">
                   <!-- 1х: 715px; 2x: 1430px -->
-                  <img src="img/components-tablet.png" srcset="img/components-tablet@2x.png 2x" width="715" height="256" alt="Светодиоды">
+                  <img class="lazyload" src="img/components-tablet.png" data-src="img/components-tablet.png" srcset="img/components-tablet@2x.png 2x" data-srcset="img/components-tablet@2x.png 2x" width="715" height="256" alt="Светодиоды">
                 </picture>
               </div>
               <div class="services__img-wrap services__img-wrap--mobile">
                 <picture>
-                  <source type="image/webp" srcset="img/components-mobile.webp 1x, img/components-mobile@2x.webp 2x">
+                  <source class="lazyload" type="image/webp" srcset="img/components-mobile.webp 1x, img/components-mobile@2x.webp 2x" data-srcset="img/components-mobile.webp 1x, img/components-mobile@2x.webp 2x">
                   <!-- 1х: 290px; 2x: 580px -->
-                  <img src="img/components-mobile.png" srcset="img/components-mobile@2x.png 2x" width="290" height="256" alt="Светодиоды">
+                  <img class="lazyload" src="img/components-mobile.png" data-src="img/components-mobile.png" srcset="img/components-mobile@2x.png 2x" data-srcset="img/components-mobile@2x.png 2x" width="290" height="256" alt="Светодиоды">
                 </picture>
               </div>
               <span>Комплектующие для светотехники</span>
@@ -350,22 +348,22 @@
       <div class="container">
         <div class="feedback__img-wrap">
           <picture>
-            <source type="image/webp" srcset="img/plane.webp 1x, img/plane@2x.webp 2x">
+            <source class="lazyload" type="image/webp" srcset="img/plane.webp 1x, img/plane@2x.webp 2x" data-srcset="img/plane.webp 1x, img/plane@2x.webp 2x">
             <!-- 1х: 511px; 2x: 1022px -->
-            <img src="img/plane.png" srcset="img/plane@2x.png 2x" width="511" height="288" alt="Бумажный самолетик">
+            <img class="lazyload" src="img/plane.png" data-src="img/plane.png" srcset="img/plane@2x.png 2x" data-srcset="img/plane@2x.png 2x" width="511" height="288" alt="Бумажный самолетик">
           </picture>
         </div>
         <div class="feedback__form-wrap">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <form>
+          <form method="post" action="https://echo.htmlacademy.ru">
             <div class="feedback__wrap feedback__name-wrap">
               <label class="visually-hidden" for="feedback-name"></label>
               <input type="text" id="feedback-name" placeholder="Имя">
             </div>
             <div class="feedback__wrap feedback__phone-wrap">
               <label class="visually-hidden" for="feedback-phone"></label>
-              <input type="tel" id="feedback-phone" pattern="\+7\(\d{3}\)\d{7}" max-lenght="14" placeholder="Телефон">
+              <input type="tel" id="feedback-phone" pattern="\+7\(\d{3}\)\d{7}" maxlength="14" placeholder="Телефон">
             </div>
             <div class="feedback__wrap feedback__question-wrap">
               <label for="feedback-question"></label>
@@ -390,7 +388,7 @@
       </a>
       <ul class="footer__social-links">
         <li>
-          <a href="#" aria-label="Фейсбук"> 
+          <a href="#" aria-label="Фейсбук">
             <svg width="27" height="27">
               <use xlink:href="#facebook"></use>
             </svg>
@@ -423,25 +421,25 @@
         <nav class="footer__accordion">
           <ul>
             <li>
-              <a href="">О компании</a>
+              <a href="#">О компании</a>
             </li>
             <li>
-              <a href="">Продукты</a>
+              <a href="#">Продукты</a>
             </li>
             <li>
-              <a href="">Производство печатных плат</a>
+              <a href="#">Производство печатных плат</a>
             </li>
             <li>
-              <a href="">Монтаж печатных плат</a>
+              <a href="#">Монтаж печатных плат</a>
             </li>
             <li>
-              <a href="">Комплектующие</a>
+              <a href="#">Комплектующие</a>
             </li>
             <li>
-              <a href="">Доставка</a>
+              <a href="#">Доставка</a>
             </li>
             <li>
-              <a href="">Контакты</a>
+              <a href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -468,6 +466,7 @@
       <span>Developed by wow studio</span>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/lazysizes.min.js" async></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

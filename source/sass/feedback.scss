@@ -1,7 +1,7 @@
 .feedback {
-  background: url('../img/triangle-group.svg') -855px -178px no-repeat,
-    url('../img/feedback-triangle-top.svg') 100.25% 10.2% no-repeat,
-    $blue url('../img/feedback-triangle-bottom.svg') 101.1% 108.3% no-repeat;
+  background: url("../img/triangle-group.svg") -855px -178px no-repeat,
+    url("../img/feedback-triangle-top.svg") 100.25% 10.2% no-repeat,
+    $blue url("../img/feedback-triangle-bottom.svg") 101.1% 108.3% no-repeat;
 
   .container {
     display: flex;
@@ -30,7 +30,7 @@
   }
 
   h2 {
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 36px;
     line-height: 51px;
     font-weight: 400;
@@ -46,10 +46,10 @@
     margin-left: 4px;
     margin-bottom: 51px;
   }
-  
+
   input[type="text"],
   input[type="tel"] {
-    font-family: 'PT Mono', 'Courier', monospace;
+    font-family: "PT Mono", "Courier", monospace;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -61,7 +61,7 @@
     margin-bottom: 40px;
 
     &::placeholder {
-      font-family: 'PT Mono', 'Courier', monospace;
+      font-family: "PT Mono", "Courier", monospace;
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
@@ -79,7 +79,7 @@
   }
 
   textarea {
-    font-family: 'PT Mono', 'Courier', monospace;
+    font-family: "PT Mono", "Courier", monospace;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -93,7 +93,7 @@
     margin-bottom: 39px;
 
     &::placeholder {
-      font-family: 'PT Mono', 'Courier', monospace;
+      font-family: "PT Mono", "Courier", monospace;
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
@@ -102,7 +102,7 @@
   }
 
   button {
-    font-family: 'Roboto Condensed', 'Arial', sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -142,36 +142,34 @@
   input[type="checkbox"] + label {
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       width: 14px;
       height: 14px;
       background-color: transparent;
       border: 1px solid $white;
       top: 2px;
-      left: -31px
+      left: -31px;
     }
   }
 
-  input[type="checkbox"] {
-    &:checked + label {
-      &::after {
-        position: absolute;
-        content: '';
-        background: url('../img/check.svg') 0 0 no-repeat;
-        width: 9px;
-        height: 6px;
-        top: 7px;
-        left: -27px;
-      }
+  input[type="checkbox"]:checked {
+    & + label::after {
+      position: absolute;
+      content: "";
+      background: url("../img/check.svg") 0 0 no-repeat;
+      width: 9px;
+      height: 6px;
+      top: 7px;
+      left: -27px;
     }
   }
 }
 
 @media (min-width: $desktop-width) and (max-width: $desctop-content-width - 1px) {
   .feedback {
-    background: url('../img/triangle-group.svg') -1150px -178px no-repeat,
-      url('../img/feedback-triangle-top.svg') 100.25% 10.2% no-repeat,
-      $blue url('../img/feedback-triangle-bottom.svg') 101.1% 108.3% no-repeat; 
+    background: url("../img/triangle-group.svg") -1150px -178px no-repeat,
+      url("../img/feedback-triangle-top.svg") 100.25% 10.2% no-repeat,
+      $blue url("../img/feedback-triangle-bottom.svg") 101.1% 108.3% no-repeat;
   }
 
   .feedback__img-wrap {
@@ -182,7 +180,7 @@
       min-width: 400px;
     }
   }
- 
+
   .feedback__form-wrap {
     transform: scale(0.8);
   }
