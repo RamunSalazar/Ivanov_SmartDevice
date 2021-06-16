@@ -1,28 +1,21 @@
 .feedback {
   background: url("../img/triangle-group.svg") -855px -178px no-repeat,
     url("../img/feedback-triangle-top.svg") 100.25% 10.2% no-repeat,
+    url("../../img/plane.png") 25.15% 42.2% no-repeat,
     $blue url("../img/feedback-triangle-bottom.svg") 101.1% 108.3% no-repeat;
 
   .container {
-    display: flex;
+    width: 686px;
     padding-top: 61px;
     padding-bottom: 113px;
-  }
-}
-
-.feedback__img-wrap {
-  margin-right: 111px;
-  padding-top: 100px;
-  padding-left: 104px;
-
-  img {
-    min-width: 511px;
+    padding-left: 726px;
   }
 }
 
 .feedback__form-wrap {
   display: flex;
   flex-direction: column;
+  width: 580px;
 
   form {
     display: flex;
@@ -165,24 +158,38 @@
   }
 }
 
+@media (min-resolution: 2dppx) {
+  .feedback {
+    background: url("../img/triangle-group.svg") -855px -178px no-repeat,
+      url("../img/feedback-triangle-top.svg") 100.25% 10.2% no-repeat,
+      url("../../img/plane.png") 25.15% 42.2% no-repeat,
+      $blue url("../img/feedback-triangle-bottom.svg") 101.1% 108.3% no-repeat;
+  }
+}
+
 @media (min-width: $desktop-width) and (max-width: $desctop-content-width - 1px) {
   .feedback {
     background: url("../img/triangle-group.svg") -1150px -178px no-repeat,
       url("../img/feedback-triangle-top.svg") 100.25% 10.2% no-repeat,
       $blue url("../img/feedback-triangle-bottom.svg") 101.1% 108.3% no-repeat;
-  }
 
-  .feedback__img-wrap {
-    margin-right: 0;
-    padding-left: 20px;
-
-    img {
-      min-width: 400px;
+    .container {
+      width: 535px;
+      padding-left: 460px;
+      background: url("../../img/plane.png") 0 42.2% no-repeat;
     }
   }
 
   .feedback__form-wrap {
     transform: scale(0.8);
+  }
+
+  @media (min-resolution: 2dppx) {
+    .feedback {
+      .container {
+        background: url("../../img/plane@2x.png") 0 42.2% no-repeat;
+      }
+    }
   }
 }
 
@@ -193,11 +200,8 @@
     .container {
       padding-top: 54px;
       padding-bottom: 104px;
+      padding-left: 25px;
     }
-  }
-
-  .feedback__img-wrap {
-    display: none;
   }
 
   .feedback__form-wrap {

@@ -1,12 +1,13 @@
 .about-us {
-  background: url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
-    url("../img/triangle-left-bottom.svg") 0 114% no-repeat,
-    url("../img/triangle-center.svg") 54.2% 38% no-repeat,
-    url("../img/triangle-right.svg") 99.3% 47% no-repeat;
+  background: url("../../img/triangle-left-top.svg") 12.9% 5% no-repeat,
+    url("../../img/triangle-left-bottom.svg") 0 114% no-repeat,
+    url("../../img/triangle-center.svg") 54.2% 38% no-repeat,
+    url("../../img/triangle-right.svg") 99.3% 47% no-repeat,
+    url("../../img/year.png") 20.5% 89.9% no-repeat;
 
   .container {
     padding-top: 112px;
-    padding-bottom: 97px;
+    padding-bottom: 109px;
   }
 
   ul {
@@ -38,20 +39,18 @@
 }
 
 .about-us__list-item {
-  height: 219px;
+  height: 163px;
   width: 485px;
   border: 1px solid $grey-special;
   border-left: 3px solid $blue;
   margin-bottom: 29px;
-  padding: 39px 40px 40px 41px;
-  background-color: $white;
+  padding: 95px 40px 40px 41px;
 
   &:nth-child(n + 1) {
     margin-right: 30px;
   }
 
   &:hover {
-    background-color: $blue;
     border-color: $blue;
 
     span {
@@ -64,40 +63,41 @@
   }
 
   &--one {
-    svg {
-      margin-bottom: 17px;
+    background: $white url("../../img/stopwatch.svg") 41px 38px no-repeat;
+
+    &:hover {
+      background: $blue url("../../img/stopwatch-hover.svg") 41px 38px no-repeat;
+    }
+  }
+
+  &--two {
+    background: $white url("../../img/hired.svg") 42px 41px no-repeat;
+
+    &:hover {
+      background: $blue url("../../img/hired-hover.svg") 42px 41px no-repeat;
     }
   }
 
   &--three {
-    svg {
-      position: relative;
-      top: 3px;
+    background: $white url("../../img/detective.svg") 41px 42px/36px 31px no-repeat;
+
+    &:hover {
+      background: $blue url("../../img/detective-hover.svg") 41px 42px/36px 31px no-repeat;
+    }
+  }
+
+  &--four {
+    background: $white url("../../img/tag.svg") 42px 40px no-repeat;
+
+    &:hover {
+      background: $blue url("../../img/tag-hover.svg") 42px 40px no-repeat;
     }
   }
 }
 
-.about-us__img-wrap {
-  img {
-    min-width: 220px;
-    position: relative;
-    top: 5px;
-  }
-
-  &--tablet {
-    display: none;
-  }
-}
-
-.about-us__wrap {
-  display: flex;
-  padding-left: 100px;
-  padding-right: 120px;
-}
-
 .about-us__text-wrap {
-  position: relative;
-  left: -11px;
+  padding-left: 310px;
+  padding-right: 120px;
 
   h2 {
     font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -138,6 +138,16 @@
   }
 }
 
+@media (min-resolution: 2dppx) {
+  .about-us {
+    background: url("../../img/triangle-left-top.svg") 12.9% 5% no-repeat,
+      url("../../img/triangle-left-bottom.svg") 0 114% no-repeat,
+      url("../../img/triangle-center.svg") 54.2% 38% no-repeat,
+      url("../../img/triangle-right.svg") 99.3% 47% no-repeat,
+      url("../../img/year@2x.png") 20.5% 89.9%/contain contain no-repeat;
+  }
+}
+
 @media (min-width: $desktop-width) and (max-width: $desctop-content-width - 1px) {
   .about-us__list-item {
     height: 269px;
@@ -147,7 +157,8 @@
 
 @media (max-width: $desktop-width - 1px) {
   .about-us {
-    background: url("../img/triangle-center.svg") -202.6% 38% no-repeat;
+    background: url("../img/triangle-center.svg") -202.6% 38% no-repeat,
+      url("../../img/year-tablet.png") 0 90% no-repeat;
 
     .container {
       padding-top: 54px;
@@ -177,9 +188,9 @@
   }
 
   .about-us__list-item {
-    height: 256px;
+    height: 214px;
     width: 289px;
-    padding: 24px 28px 24px 25px;
+    padding: 66px 28px 24px 25px;
     border-left-width: 2px;
 
     &:nth-child(2n) {
@@ -187,31 +198,47 @@
     }
 
     &--one {
-      svg {
-        margin-bottom: 5px;
+      background: $white url("../../img/stopwatch.svg") 25px 23px no-repeat;
+
+      &:hover {
+        background: $blue url("../../img/stopwatch-hover.svg") 25px 23px no-repeat;
+      }
+    }
+
+    &--two {
+      background: $white url("../../img/hired.svg") 25px 23px no-repeat;
+
+      &:hover {
+        background: $blue url("../../img/hired-hover.svg") 25px 23px no-repeat;
       }
     }
 
     &--three {
-      svg {
-        left: -3px;
-        top: 1px;
+      height: 141px;
+      background: $white url("../../img/detective.svg") 25px 27px/31px 26px no-repeat;
+
+      &:hover {
+        background: $blue url("../../img/detective-hover.svg") 25px 27px/31px 26px no-repeat;
       }
 
       span {
-        margin-bottom: 17px;
+        margin-bottom: 16px;
       }
     }
 
-    &--three,
     &--four {
-      height: 183px;
+      height: 141px;
+      background: $white url("../../img/tag.svg") 25px 24px no-repeat;
+
+      &:hover {
+        background: $blue url("../../img/tag-hover.svg") 25px 24px no-repeat;
+      }
     }
   }
 
   .about-us__text-wrap {
-    left: -52px;
-    margin-right: -50px;
+    padding-left: 188px;
+    padding-right: 0;
     position: relative;
 
     h2 {
@@ -234,17 +261,17 @@
       height: 20px;
       color: $grey;
       background-color: $white;
-      right: -4px;
+      left: 697px;
       top: 244px;
     }
 
     &::after {
       position: absolute;
       content: "";
-      width: 100%;
+      width: 550px;
       height: 70px;
       background-color: $white;
-      left: 0;
+      left: 150px;
       bottom: 75px;
     }
 
@@ -259,26 +286,10 @@
     }
   }
 
-  .about-us__wrap {
-    display: flex;
-    padding-left: 0;
-    padding-right: 0;
-    justify-content: center;
-  }
-
-  .about-us__img-wrap {
-    img {
-      min-width: 244px;
-      top: -2px;
-      left: -21px;
-    }
-
-    &--desktop {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
+  @media (min-resolution: 2dppx) {
+    .about-us {
+      background: url("../img/triangle-center.svg") -202.6% 38% no-repeat,
+        url("../../img/year-tablet@2x.png") 0 90%/contain contain no-repeat;
     }
   }
 }
@@ -309,9 +320,9 @@
   }
 
   .about-us__list-item {
-    height: 260px;
+    height: 212px;
     width: 100%;
-    padding: 24px 28px 24px 25px;
+    padding: 72px 28px 24px 25px;
     border-left-width: 2px;
     margin-bottom: 20px;
 
@@ -324,35 +335,36 @@
     }
 
     &--one {
-      svg {
-        margin-bottom: 10px;
-      }
-
       p {
         margin-right: 0;
       }
     }
 
     &--two {
-      svg {
-        margin-bottom: 12px;
-      }
+      height: 216px;
+      padding-top: 68px;
     }
 
     &--three {
-      height: 183px;
+      height: 144px;
+      padding-top: 62px;
+      background-position: 24px 24px;
 
-      svg {
-        top: -2px;
-        margin-bottom: 8px;
+      &:hover {
+        background-position: 24px 24px;
+      }
+
+      span {
+        margin-bottom: 18px;
       }
     }
 
     &--four {
-      height: 193px;
+      height: 150px;
+      padding-top: 68px;
 
       span {
-        margin-bottom: 19px;
+        margin-bottom: 18px;
       }
 
       p {
@@ -366,6 +378,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 288px;
+    padding-left: 0;
 
     p {
       width: 100%;
@@ -392,14 +405,12 @@
     &::after {
       height: 100px;
       bottom: 90px;
+      width: 100%;
+      left: 0;
     }
 
     a {
       top: -120px;
     }
-  }
-
-  .about-us__img-wrap {
-    display: none;
   }
 }

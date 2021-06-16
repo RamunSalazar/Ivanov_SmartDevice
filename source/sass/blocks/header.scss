@@ -27,6 +27,34 @@
   font-size: 16px;
   line-height: 18px;
   color: $white;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+  }
+
+  &--phone {
+    margin-left: 122px;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      background: url("../../img/phone.svg") 0 0 no-repeat;
+      top: 0;
+      left: -33px;
+    }
+  }
+
+  &--email {
+    &::before {
+      width: 19px;
+      height: 14px;
+      background: url("../../img/email.svg") 0 0 no-repeat;
+      top: 2px;
+      left: -38px;
+    }
+  }
 }
 
 .header__feedback-link {
@@ -47,24 +75,6 @@
   display: flex;
   align-items: baseline;
   padding-top: 5px;
-}
-
-.header__link-phone {
-  margin-left: 95px;
-
-  svg {
-    position: relative;
-    top: 3px;
-    left: -7px;
-  }
-}
-
-.header__link-mail {
-  svg {
-    position: relative;
-    top: 2px;
-    left: -9px;
-  }
 }
 
 .header__content-wrap {
@@ -350,14 +360,14 @@
 
   .header__links-wrap {
     margin-right: 24px;
+
+    &--phone {
+      margin-left: 40px;
+    }
   }
 
   .header__feedback-link {
     margin-left: 24px;
-  }
-
-  .header__link-phone {
-    margin-left: 40px;
   }
 }
 
@@ -393,6 +403,34 @@
     span {
       display: none;
     }
+
+    &--phone {
+      margin-left: 33px;
+      margin-right: 23px;
+      width: 24px;
+      height: 24px;
+
+      &::before {
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        top: auto;
+        left: auto;
+      }
+    }
+
+    &--email {
+      width: 26px;
+      height: 18px;
+
+      &::before {
+        width: 26px;
+        height: 18px;
+        background-size: contain;
+        top: -3px;
+        left: auto;
+      }
+    }
   }
 
   .header__feedback-link {
@@ -401,27 +439,6 @@
 
   .header__wrap {
     padding-top: 12px;
-  }
-
-  .header__link-phone {
-    margin-left: 33px;
-    margin-right: 23px;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      top: auto;
-      left: auto;
-    }
-  }
-
-  .header__link-mail {
-    svg {
-      width: 26px;
-      height: 18px;
-      top: -3px;
-      left: auto;
-    }
   }
 
   .header__content-wrap {
@@ -518,8 +535,9 @@
   }
 
   .header__link {
-    span {
-      display: none;
+    &--phone {
+      margin-left: 22px;
+      margin-right: 0;
     }
   }
 
@@ -529,27 +547,6 @@
 
   .header__wrap {
     padding-top: 5px;
-  }
-
-  .header__link-phone {
-    margin-left: 22px;
-    margin-right: 0;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      top: auto;
-      left: auto;
-    }
-  }
-
-  .header__link-mail {
-    svg {
-      width: 26px;
-      height: 18px;
-      top: -3px;
-      left: auto;
-    }
   }
 
   .header__content-wrap {
