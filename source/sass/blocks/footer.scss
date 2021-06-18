@@ -62,6 +62,10 @@
   position: relative;
   left: 6px;
   margin-bottom: 50px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .footer__social-links {

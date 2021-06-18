@@ -53,6 +53,10 @@
     min-width: 236px;
     margin-bottom: 40px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &::placeholder {
       font-family: "PT Mono", "Courier", monospace;
       font-weight: 400;
@@ -84,6 +88,11 @@
     height: 127px;
     margin-left: 3px;
     margin-bottom: 39px;
+    resize: none;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &::placeholder {
       font-family: "PT Mono", "Courier", monospace;
@@ -254,6 +263,9 @@
       padding-top: 7px;
       padding-bottom: 41px;
       padding-left: 13px;
+      width: calc(100% - 29px);
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 

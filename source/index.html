@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии. Выполняем срочные заказы и пилотные образцы до 10 дней.">
   <title>HTML Academy: Smart Device</title>
-  <link rel="stylesheet preload" href="css/normalize.css" as="style">
-  <link rel="stylesheet preload" href="css/style.min.css" as="style">
+  <link rel="preload stylesheet" href="css/normalize.css" as="style">
+  <link rel="preload stylesheet" href="css/style.min.css" as="style">
   <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -134,7 +134,7 @@
         <div class="header__modal">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <button class="header__modal-close" type="button" aria-label="Закрыть окно">
+          <button class="header__modal-close" tabindex="6" type="button" aria-label="Закрыть окно">
             <svg width="17" height="17">
               <use xlink:href="#close"></use>
             </svg>
@@ -142,19 +142,19 @@
           <form method="post" action="https://echo.htmlacademy.ru">
             <div>
               <label class="visually-hidden" for="header-name"></label>
-              <input type="text" id="header-name" pattern="[а-яА-ЯёЁ]+" placeholder="Имя" required autofocus>
+              <input type="text" id="header-name" tabindex="1" pattern="[а-яА-ЯёЁ]+" placeholder="Имя" required>
             </div>
             <div>
               <label class="visually-hidden" for="header-phone"></label>
-              <input type="tel" id="header-phone" pattern="\+7\(\d{3}\)\d{7}" maxlength="14" placeholder="Телефон" required>
+              <input type="tel" id="header-phone" tabindex="2" pattern="\+7\(\d{3}\)\d{7}" maxlength="14" placeholder="Телефон" required>
             </div>
             <div>
               <label for="header-question"></label>
-              <textarea id="header-question" placeholder="Ваш вопрос"></textarea>
+              <textarea id="header-question" tabindex="3" placeholder="Ваш вопрос"></textarea>
             </div>
-            <button type="submit">Отправить</button>
+            <button type="submit" tabindex="5">Отправить</button>
             <div class="header__check-wrap">
-              <input class="visually-hidden" type="checkbox" id="header-check" checked required>
+              <input class="visually-hidden" tabindex="4" type="checkbox" id="header-check" checked required>
               <label for="header-check">Я согласен на обработку  персональных данных</label>
             </div>
           </form>
@@ -284,19 +284,19 @@
           <form method="post" action="https://echo.htmlacademy.ru">
             <div class="feedback__wrap feedback__name-wrap">
               <label class="visually-hidden" for="feedback-name"></label>
-              <input type="text" id="feedback-name" pattern="[а-яА-ЯёЁ]+" placeholder="Имя">
+              <input type="text" id="feedback-name" tabindex="1" pattern="[а-яА-ЯёЁ]+" placeholder="Имя">
             </div>
             <div class="feedback__wrap feedback__phone-wrap">
               <label class="visually-hidden" for="feedback-phone"></label>
-              <input type="tel" id="feedback-phone" pattern="\+7\(\d{3}\)\d{7}" maxlength="14" placeholder="Телефон">
+              <input type="tel" id="feedback-phone" tabindex="2" pattern="\+7\(\d{3}\)\d{7}" maxlength="14" placeholder="Телефон">
             </div>
             <div class="feedback__wrap feedback__question-wrap">
               <label for="feedback-question"></label>
-              <textarea id="feedback-question" placeholder="Ваш вопрос"></textarea>
+              <textarea id="feedback-question" tabindex="3" placeholder="Ваш вопрос"></textarea>
             </div>
-            <button type="submit">Задать вопрос</button>
+            <button type="submit" tabindex="5">Задать вопрос</button>
             <div class="feedback__wrap feedback__check-wrap">
-              <input class="visually-hidden" type="checkbox" id="feedback-check" checked>
+              <input class="visually-hidden" tabindex="4" type="checkbox" id="feedback-check" checked required>
               <label for="feedback-check">Я согласен на обработку  персональных данных</label>
             </div>
           </form>
@@ -391,7 +391,7 @@
       <span>Developed by wow studio</span>
     </div>
   </footer>
-  <script src="js/vendor.js" async></script>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

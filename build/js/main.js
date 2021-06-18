@@ -54,11 +54,31 @@ inputTypeTelElement.addEventListener('focus', () => {
   inputTypeTelElement.value = '+7(';
 });
 
+headerInputTypeTelElement.addEventListener('focus', () => {
+  headerInputTypeTelElement.value = '+7(';
+});
+
 window.addEventListener('keydown', (evt) => {
   if (evt.keyCode === BACKSPACE_KEY_CODE) {
     if (String(inputTypeTelElement.value).length === PHONE_LENGHT_SEVEN) {
       inputTypeTelElement.value = String(inputTypeTelElement.value).slice(0, 6);
     }
+  }
+
+  if (evt.keyCode === BACKSPACE_KEY_CODE) {
+    if (String(headerInputTypeTelElement.value).length === PHONE_LENGHT_SEVEN) {
+      headerInputTypeTelElement.value = String(headerInputTypeTelElement.value).slice(0, 6);
+    }
+  }
+});
+
+headerInputTypeTelElement.addEventListener('input', () => {
+  if (String(headerInputTypeTelElement.value).length === PHONE_LENGHT_TWO) {
+    headerInputTypeTelElement.value = String(headerInputTypeTelElement.value) + '(';
+  }
+
+  if (String(headerInputTypeTelElement.value).length === PHONE_LENGHT_SIX) {
+    headerInputTypeTelElement.value = String(headerInputTypeTelElement.value) + ')';
   }
 });
 
