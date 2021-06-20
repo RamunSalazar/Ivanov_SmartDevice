@@ -1,6 +1,6 @@
 .header {
   flex: 1 0 auto;
-  background: url("../img/triangle-group.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-desktop.png") 0 0 no-repeat;
+  background: url("../../img/triangle-group.svg") 0 0 no-repeat, $dark-grey url("../../img/header-background-desktop.png") 0 0 no-repeat;
 
   .container {
     padding-top: 33px;
@@ -54,7 +54,7 @@
     &::before {
       width: 19px;
       height: 14px;
-      background: url("../../img/email.svg") 0 0 no-repeat;
+      background: url("../img/email.svg") 0 0 no-repeat;
       top: 2px;
       left: -38px;
     }
@@ -301,10 +301,6 @@
     &:hover {
       cursor: pointer;
     }
-
-    /* &:focus-within {
-      outline: 1px solid $black;
-    } */
   }
 
   input[type="checkbox"] + label {
@@ -324,7 +320,7 @@
     & + label::after {
       position: absolute;
       content: "";
-      background: url("../img/check.svg") 0 0 no-repeat;
+      background: url("../../img/check.svg") 0 0 no-repeat;
       width: 9px;
       height: 6px;
       top: 7px;
@@ -353,13 +349,13 @@
 
 @media (min-resolution: 2dppx) {
   .header {
-    background: url("../img/triangle-group.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-desktop@2x.png") 0 0 no-repeat;
+    background: url("../../img/triangle-group.svg") 0 0 no-repeat, $dark-grey url("../../img/header-background-desktop@2x.png") 0 0 no-repeat;
   }
 }
 
 @media (min-width: $desktop-width) and (max-width: $desctop-content-width - 1px) {
   .header {
-    background: url("../img/triangle-group.svg") 70% 0 no-repeat, $dark-grey url("../img/header-background-desktop.png") 0 0/100% 100% no-repeat;
+    background: url("../../img/triangle-group.svg") 70% 0 no-repeat, $dark-grey url("../../img/header-background-desktop.png") 0 0/100% 100% no-repeat;
 
     .container {
       padding-left: 10px;
@@ -398,7 +394,7 @@
 
 @media (max-width: $desktop-width - 1px) {
   .header {
-    background: url("../img/triangle-group-tablet.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-tablet.png") 0 0 no-repeat;
+    background: url("../../img/triangle-group-tablet.svg") 0 0 no-repeat, $dark-grey url("../../img/header-background-tablet.png") 0 0 no-repeat;
     background-size: 100%;
     overflow-x: hidden;
 
@@ -526,7 +522,7 @@
 
   @media (min-resolution: 2dppx) {
     .header {
-      background: url("../img/triangle-group-tablet.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-tablet@2x.png") 0 0 no-repeat;
+      background: url("../../img/triangle-group-tablet.svg") 0 0 no-repeat, $dark-grey url("../../img/header-background-tablet@2x.png") 0 0 no-repeat;
       background-size: 100%;
     }
   }
@@ -534,7 +530,7 @@
 
 @media (max-width: $table-width - 1px) {
   .header {
-    background: url("../img/triangle-group-mobile.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-mobile.png") 0 0 no-repeat;
+    background: url("../../img/triangle-group-mobile.svg") 0 0 no-repeat, $dark-grey url("../../img/header-background-mobile.png") 0 0 no-repeat;
     background-size: 100%;
 
     .container {
@@ -645,7 +641,7 @@
 
   @media (min-resolution: 2dppx) {
     .header {
-      background: url("../img/triangle-group-mobile.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-mobile@2x.png") 0 0 no-repeat;
+      background: url("../../img/triangle-group-mobile.svg") 0 0 no-repeat, $dark-grey url("../../img/header-background-mobile@2x.png") 0 0 no-repeat;
       background-size: 100%;
     }
   }

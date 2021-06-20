@@ -157,7 +157,7 @@
 
 @media (max-width: $desktop-width - 1px) {
   .about-us {
-    background: url("../img/triangle-center.svg") -202.6% 38% no-repeat,
+    background: url("../../img/triangle-center.svg") -202.6% 38% no-repeat,
       url("../../img/year-tablet.png") 0 90% no-repeat;
 
     .container {
@@ -288,7 +288,7 @@
 
   @media (min-resolution: 2dppx) {
     .about-us {
-      background: url("../img/triangle-center.svg") -202.6% 38% no-repeat,
+      background: url("../../img/triangle-center.svg") -202.6% 38% no-repeat,
         url("../../img/year-tablet@2x.png") 0 90%/contain contain no-repeat;
     }
   }
@@ -296,7 +296,7 @@
 
 @media (max-width: $table-width - 1) {
   .about-us {
-    background: url("../img/triangle-center.svg") 22% 66.7% no-repeat;
+    background: url("../../img/triangle-center.svg") 22% 66.7% no-repeat;
 
     .container {
       padding-top: 37px;
