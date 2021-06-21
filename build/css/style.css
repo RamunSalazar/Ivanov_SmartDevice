@@ -136,7 +136,7 @@ main {
   .header__link--email::before {
     width: 19px;
     height: 14px;
-    background: url("../img/email.svg") 0 0 no-repeat;
+    background: url("../../img/email.svg") 0 0 no-repeat;
     top: 2px;
     left: -38px; }
 
