@@ -1,9 +1,9 @@
 .about-us {
-  background: url("../../img/triangle-left-top.svg") 12.9% 5% no-repeat,
-    url("../../img/triangle-left-bottom.svg") 0 114% no-repeat,
-    url("../../img/triangle-center.svg") 54.2% 38% no-repeat,
-    url("../../img/triangle-right.svg") 99.3% 47% no-repeat,
-    url("../../img/year.png") 20.5% 89.9% no-repeat;
+  background: url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
+    url("../img/triangle-left-bottom.svg") 0 114% no-repeat,
+    url("../img/triangle-center.svg") 54.2% 38% no-repeat,
+    url("../img/triangle-right.svg") 99.3% 47% no-repeat,
+    url("../img/year.png") 20.5% 89.9% no-repeat;
 
   .container {
     padding-top: 112px;
@@ -63,34 +63,34 @@
   }
 
   &--one {
-    background: $white url("../../img/stopwatch.svg") 41px 38px no-repeat;
+    background: $white url("../img/stopwatch.svg") 41px 38px no-repeat;
 
     &:hover {
-      background: $blue url("../../img/stopwatch-hover.svg") 41px 38px no-repeat;
+      background: $blue url("../img/stopwatch-hover.svg") 41px 38px no-repeat;
     }
   }
 
   &--two {
-    background: $white url("../../img/hired.svg") 42px 41px no-repeat;
+    background: $white url("../img/hired.svg") 42px 41px no-repeat;
 
     &:hover {
-      background: $blue url("../../img/hired-hover.svg") 42px 41px no-repeat;
+      background: $blue url("../img/hired-hover.svg") 42px 41px no-repeat;
     }
   }
 
   &--three {
-    background: $white url("../../img/detective.svg") 41px 42px/36px 31px no-repeat;
+    background: $white url("../img/detective.svg") 41px 42px/36px 31px no-repeat;
 
     &:hover {
-      background: $blue url("../../img/detective-hover.svg") 41px 42px/36px 31px no-repeat;
+      background: $blue url("../img/detective-hover.svg") 41px 42px/36px 31px no-repeat;
     }
   }
 
   &--four {
-    background: $white url("../../img/tag.svg") 42px 40px no-repeat;
+    background: $white url("../img/tag.svg") 42px 40px no-repeat;
 
     &:hover {
-      background: $blue url("../../img/tag-hover.svg") 42px 40px no-repeat;
+      background: $blue url("../img/tag-hover.svg") 42px 40px no-repeat;
     }
   }
 }
@@ -140,11 +140,11 @@
 
 @media (min-resolution: 2dppx) {
   .about-us {
-    background: url("../../img/triangle-left-top.svg") 12.9% 5% no-repeat,
-      url("../../img/triangle-left-bottom.svg") 0 114% no-repeat,
-      url("../../img/triangle-center.svg") 54.2% 38% no-repeat,
-      url("../../img/triangle-right.svg") 99.3% 47% no-repeat,
-      url("../../img/year@2x.png") 20.5% 89.9%/contain contain no-repeat;
+    background: url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
+      url("../img/triangle-left-bottom.svg") 0 114% no-repeat,
+      url("../img/triangle-center.svg") 54.2% 38% no-repeat,
+      url("../img/triangle-right.svg") 99.3% 47% no-repeat,
+      url("../img/year@2x.png") 20.5% 89.9%/contain contain no-repeat;
   }
 }
 
@@ -157,8 +157,8 @@
 
 @media (max-width: $desktop-width - 1px) {
   .about-us {
-    background: url("../../img/triangle-center.svg") -202.6% 38% no-repeat,
-      url("../../img/year-tablet.png") 0 90% no-repeat;
+    background: url("../img/triangle-center.svg") -202.6% 38% no-repeat,
+      url("../img/year-tablet.png") 0 90% no-repeat;
 
     .container {
       padding-top: 54px;
@@ -198,27 +198,27 @@
     }
 
     &--one {
-      background: $white url("../../img/stopwatch.svg") 25px 23px no-repeat;
+      background: $white url("../img/stopwatch.svg") 25px 23px no-repeat;
 
       &:hover {
-        background: $blue url("../../img/stopwatch-hover.svg") 25px 23px no-repeat;
+        background: $blue url("../img/stopwatch-hover.svg") 25px 23px no-repeat;
       }
     }
 
     &--two {
-      background: $white url("../../img/hired.svg") 25px 23px no-repeat;
+      background: $white url("../img/hired.svg") 25px 23px no-repeat;
 
       &:hover {
-        background: $blue url("../../img/hired-hover.svg") 25px 23px no-repeat;
+        background: $blue url("../img/hired-hover.svg") 25px 23px no-repeat;
       }
     }
 
     &--three {
       height: 141px;
-      background: $white url("../../img/detective.svg") 25px 27px/31px 26px no-repeat;
+      background: $white url("../img/detective.svg") 25px 27px/31px 26px no-repeat;
 
       &:hover {
-        background: $blue url("../../img/detective-hover.svg") 25px 27px/31px 26px no-repeat;
+        background: $blue url("../img/detective-hover.svg") 25px 27px/31px 26px no-repeat;
       }
 
       span {
@@ -228,10 +228,10 @@
 
     &--four {
       height: 141px;
-      background: $white url("../../img/tag.svg") 25px 24px no-repeat;
+      background: $white url("../img/tag.svg") 25px 24px no-repeat;
 
       &:hover {
-        background: $blue url("../../img/tag-hover.svg") 25px 24px no-repeat;
+        background: $blue url("../img/tag-hover.svg") 25px 24px no-repeat;
       }
     }
   }
@@ -288,15 +288,15 @@
 
   @media (min-resolution: 2dppx) {
     .about-us {
-      background: url("../../img/triangle-center.svg") -202.6% 38% no-repeat,
-        url("../../img/year-tablet@2x.png") 0 90%/contain contain no-repeat;
+      background: url("../img/triangle-center.svg") -202.6% 38% no-repeat,
+        url("../img/year-tablet@2x.png") 0 90%/contain contain no-repeat;
     }
   }
 }
 
 @media (max-width: $table-width - 1) {
   .about-us {
-    background: url("../../img/triangle-center.svg") 22% 66.7% no-repeat;
+    background: url("../img/triangle-center.svg") 22% 66.7% no-repeat;
 
     .container {
       padding-top: 37px;
