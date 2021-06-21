@@ -653,6 +653,13 @@ main {
     letter-spacing: 0.04em;
     color: #1b2d37;
     opacity: 0.5; }
+  .footer a + span {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    position: relative;
+    top: 2px;
+    left: 168px;
+    width: 200px; }
   .footer div + span + span {
     grid-column: 2/3;
     grid-row: 3/4;
@@ -662,12 +669,6 @@ main {
   .footer span + a {
     grid-column: 3/4;
     grid-row: 3/4; }
-  .footer a + span {
-    grid-column: 4/5;
-    grid-row: 3/4;
-    position: relative;
-    top: 2px;
-    left: 168px; }
   .footer div + span + span + a {
     position: relative;
     top: 2px;
@@ -817,7 +818,8 @@ main {
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; }
+            justify-content: flex-end;
+    width: auto; }
   .footer div + span + span + a {
     left: 2px; }
   .footer::after {
@@ -1071,19 +1073,23 @@ main {
   .about-us__list-item--one {
     background: #ffffff url("../img/stopwatch.svg") 41px 38px no-repeat; }
     .about-us__list-item--one:hover {
-      background: #00b2ff url("../img/stopwatch-hover.svg") 41px 38px no-repeat; }
+      background: #00b2ff url("../img/stopwatch-hover.svg") 41px 38px no-repeat;
+      cursor: pointer; }
   .about-us__list-item--two {
     background: #ffffff url("../img/hired.svg") 42px 41px no-repeat; }
     .about-us__list-item--two:hover {
-      background: #00b2ff url("../img/hired-hover.svg") 42px 41px no-repeat; }
+      background: #00b2ff url("../img/hired-hover.svg") 42px 41px no-repeat;
+      cursor: pointer; }
   .about-us__list-item--three {
     background: #ffffff url("../img/detective.svg") 41px 42px/36px 31px no-repeat; }
     .about-us__list-item--three:hover {
-      background: #00b2ff url("../img/detective-hover.svg") 41px 42px/36px 31px no-repeat; }
+      background: #00b2ff url("../img/detective-hover.svg") 41px 42px/36px 31px no-repeat;
+      cursor: pointer; }
   .about-us__list-item--four {
     background: #ffffff url("../img/tag.svg") 42px 40px no-repeat; }
     .about-us__list-item--four:hover {
-      background: #00b2ff url("../img/tag-hover.svg") 42px 40px no-repeat; }
+      background: #00b2ff url("../img/tag-hover.svg") 42px 40px no-repeat;
+      cursor: pointer; }
 
 .about-us__text-wrap {
   padding-left: 310px;
@@ -1264,8 +1270,9 @@ main {
     left: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 288px;
-    padding-left: 0; }
+    padding-left: 0;
+    height: 602px;
+    overflow-x: hidden; }
     .about-us__text-wrap p {
       width: 100%; }
     .about-us__text-wrap h2 {
@@ -1274,19 +1281,28 @@ main {
       letter-spacing: -0.01em;
       margin-bottom: 20px; }
     .about-us__text-wrap h2 + p {
-      margin-bottom: 41px; }
+      margin-bottom: 41px;
+      height: 132px; }
+    .about-us__text-wrap p + p {
+      height: 186px; }
     .about-us__text-wrap::before {
-      width: 100px;
-      right: auto;
-      left: 135px;
-      top: 386px; }
+      width: 200px;
+      right: -45px;
+      left: auto;
+      top: auto;
+      bottom: 195px; }
     .about-us__text-wrap::after {
       height: 100px;
       bottom: 90px;
       width: 100%;
       left: 0; }
     .about-us__text-wrap a {
-      top: -120px; } }
+      top: auto;
+      bottom: 20px; } }
+
+@media (min-width: 507px) and (max-width: 767px) {
+  .about-us__text-wrap::before {
+    display: none; } }
 
 .services {
   background-color: #1b2d37; }
@@ -1417,12 +1433,13 @@ main {
     margin-left: 10px;
     margin-bottom: 42px; }
   .services li {
-    margin-bottom: 26px; }
+    margin-bottom: 26px;
+    width: 100%; }
   .services span {
     top: 20px;
     left: 36px; }
   .services ul {
-    width: 288px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto; }
   .services__img-wrap--tablet {
@@ -1430,10 +1447,13 @@ main {
   .services__img-wrap--mobile {
     display: block; }
   .services__list-item img {
-    min-width: 290px;
+    min-width: auto;
+    width: 100%;
     left: 1px; }
-  .services__list-item a::before {
-    right: -1px; }
+  .services__list-item a {
+    width: 100%; }
+    .services__list-item a::before {
+      right: -1px; }
   .services__list-item--three span {
     top: 30px; } }
 
@@ -1592,6 +1612,8 @@ main {
   width: 230px;
   padding-top: 5px;
   padding-left: 32px; }
+  .feedback__check-wrap:focus-within {
+    outline: 1px solid #000000; }
   .feedback__check-wrap label {
     font-size: 14px;
     line-height: 16px;

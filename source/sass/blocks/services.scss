@@ -192,6 +192,7 @@
 
     li {
       margin-bottom: 26px;
+      width: 100%;
     }
 
     span {
@@ -200,7 +201,7 @@
     }
 
     ul {
-      width: 288px;
+      width: 100%;
       margin-right: auto;
       margin-left: auto;
     }
@@ -218,11 +219,14 @@
 
   .services__list-item {
     img {
-      min-width: 290px;
+      min-width: auto;
+      width: 100%;
       left: 1px;
     }
 
     a {
+      width: 100%;
+
       &::before {
         right: -1px;
       }

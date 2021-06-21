@@ -89,24 +89,24 @@
           </svg>
         </a>
         <div class="header__wrap">
-          <a class="header__link header__link--email" href="mailto:info@sd.ru">
+          <a class="header__link header__link--email" tabindex="1" href="mailto:info@sd.ru">
             <span>info@sd.ru</span>
           </a>
-          <a class="header__link header__link--phone" href="tel:+74950005252">
+          <a class="header__link header__link--phone" tabindex="2" href="tel:+74950005252">
             <span>+7 (495) 000 52 52</span>
           </a>
-          <a class="header__feedback-link" href="feedback.html">Заказать звонок</a>
+          <a class="header__feedback-link" href="feedback.html" tabindex="3">Заказать звонок</a>
         </div>
       </div>
       <div class="header__content-wrap">
         <div class="header__text-wrap">
           <h1>Печатные платы</h1>
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a href="#feedback">
+          <a href="#feedback" tabindex="4">
             <span>Получить бесплатную консультацию</span>
             <span>Бесплатная консультация</span>
           </a>
-          <a href="#about-us">Скролл вниз</a>
+          <a href="#about-us" tabindex="5">Скролл вниз</a>
         </div>
         <div class="header__img-wrap header__img-wrap--desktop">
           <picture>
@@ -134,7 +134,7 @@
         <div class="header__modal">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <button class="header__modal-close" tabindex="6" type="button" aria-label="Закрыть окно">
+          <button class="header__modal-close" type="button" tabindex="34" aria-label="Закрыть окно">
             <svg width="17" height="17">
               <use xlink:href="#close"></use>
             </svg>
@@ -142,19 +142,19 @@
           <form method="post" action="https://echo.htmlacademy.ru">
             <div>
               <label class="visually-hidden" for="header-name"></label>
-              <input type="text" id="header-name" tabindex="1" pattern="[а-яА-ЯёЁ]+" placeholder="Имя" required>
+              <input type="text" id="header-name" pattern="[а-яА-ЯёЁa-zA-Z]+" tabindex="29" placeholder="Имя" required>
             </div>
             <div>
               <label class="visually-hidden" for="header-phone"></label>
-              <input type="tel" id="header-phone" tabindex="2" pattern="\+7\(\d{3}\)\d{7}" maxlength="14" placeholder="Телефон" required>
+              <input type="tel" id="header-phone" pattern="\+7\(\d{3}\)\d{7}" tabindex="30" maxlength="14" placeholder="Телефон" required>
             </div>
             <div>
               <label for="header-question"></label>
-              <textarea id="header-question" tabindex="3" placeholder="Ваш вопрос"></textarea>
+              <textarea id="header-question" tabindex="31" placeholder="Ваш вопрос"></textarea>
             </div>
-            <button type="submit" tabindex="5">Отправить</button>
+            <button type="submit" tabindex="33">Отправить</button>
             <div class="header__check-wrap">
-              <input class="visually-hidden" tabindex="4" type="checkbox" id="header-check" checked required>
+              <input class="visually-hidden" type="checkbox" id="header-check" tabindex="32" checked required>
               <label for="header-check">Я согласен на обработку  персональных данных</label>
             </div>
           </form>
@@ -187,7 +187,7 @@
           <h2>О компании</h2>
           <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
           <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-          <a href="#">Подробнее</a>
+          <a href="#" tabindex="6" >Подробнее</a>
         </div>
       </div>
     </section>
@@ -196,7 +196,7 @@
         <h2>Service Device предлагает следующие товары и услуги</h2>
         <ul>
           <li class="services__list-item services__list-item--one">
-            <a href="#">
+            <a href="#" tabindex="7">
               <div class="services__img-wrap services__img-wrap--desktop">
                 <picture>
                   <source class="lazyload" type="image/webp" srcset="img/production-desktop.webp 1x, img/production-desktop@2x.webp 2x" data-srcset="img/production-desktop.webp 1x, img/production-desktop@2x.webp 2x">
@@ -222,7 +222,7 @@
             </a>
           </li>
           <li class="services__list-item services__list-item--two">
-            <a href="#">
+            <a href="#" tabindex="8">
               <div class="services__img-wrap services__img-wrap--desktop">
                 <picture>
                   <source class="lazyload" type="image/webp" srcset="img/installation-desktop.webp 1x, img/installation-desktop@2x.webp 2x" data-srcset="img/installation-desktop.webp 1x, img/installation-desktop@2x.webp 2x">
@@ -248,7 +248,7 @@
             </a>
           </li>
           <li class="services__list-item services__list-item--three">
-            <a href="#">
+            <a href="#" tabindex="9">
               <div class="services__img-wrap services__img-wrap--desktop">
                 <picture>
                   <source class="lazyload" type="image/webp" srcset="img/components-desktop.webp 1x, img/components-desktop@2x.webp 2x" data-srcset="img/components-desktop.webp 1x, img/components-desktop@2x.webp 2x">
@@ -284,19 +284,19 @@
           <form method="post" action="https://echo.htmlacademy.ru">
             <div class="feedback__wrap feedback__name-wrap">
               <label class="visually-hidden" for="feedback-name"></label>
-              <input type="text" id="feedback-name" tabindex="1" pattern="[а-яА-ЯёЁ]+" placeholder="Имя">
+              <input type="text" id="feedback-name" pattern="[а-яА-ЯёЁa-zA-Z]+" tabindex="10" placeholder="Имя">
             </div>
             <div class="feedback__wrap feedback__phone-wrap">
               <label class="visually-hidden" for="feedback-phone"></label>
-              <input type="tel" id="feedback-phone" tabindex="2" pattern="\+7\(\d{3}\)\d{7}" maxlength="14" placeholder="Телефон">
+              <input type="tel" id="feedback-phone" pattern="\+7\(\d{3}\)\d{7}" tabindex="11" maxlength="14" placeholder="Телефон">
             </div>
             <div class="feedback__wrap feedback__question-wrap">
               <label for="feedback-question"></label>
-              <textarea id="feedback-question" tabindex="3" placeholder="Ваш вопрос"></textarea>
+              <textarea id="feedback-question" placeholder="Ваш вопрос" tabindex="12"></textarea>
             </div>
-            <button type="submit" tabindex="5">Задать вопрос</button>
+            <button type="submit" tabindex="14">Задать вопрос</button>
             <div class="feedback__wrap feedback__check-wrap">
-              <input class="visually-hidden" tabindex="4" type="checkbox" id="feedback-check" required checked>
+              <input class="visually-hidden" type="checkbox" id="feedback-check" tabindex="13" required checked>
               <label for="feedback-check">Я согласен на обработку  персональных данных</label>
             </div>
           </form>

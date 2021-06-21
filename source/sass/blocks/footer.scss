@@ -19,6 +19,15 @@
     opacity: 0.5;
   }
 
+  a + span {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    position: relative;
+    top: 2px;
+    left: 168px;
+    width: 200px;
+  }
+
   div + span + span {
     grid-column: 2/3;
     grid-row: 3/4;
@@ -31,15 +40,7 @@
     grid-column: 3/4;
     grid-row: 3/4;
   }
-
-  a + span {
-    grid-column: 4/5;
-    grid-row: 3/4;
-    position: relative;
-    top: 2px;
-    left: 168px;
-  }
-
+  
   div + span + span + a {
     position: relative;
     top: 2px;
@@ -231,6 +232,7 @@
       left: auto;
       display: flex;
       justify-content: flex-end;
+      width: auto;
     }
 
     div + span + span + a {
