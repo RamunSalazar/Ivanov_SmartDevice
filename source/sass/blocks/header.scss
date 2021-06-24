@@ -324,6 +324,13 @@
       color: $blue;
     }
   }
+
+  textarea,
+  input[type="text"],
+  input[type="tel"] {
+    appearance: none;
+    border-radius: 0;
+  }
 }
 
 .header__check-wrap {
@@ -468,7 +475,7 @@
 
   .header__link {
     margin-bottom: 0;
-    
+
     span {
       display: none;
     }
