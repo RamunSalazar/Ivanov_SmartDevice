@@ -53,8 +53,15 @@
     min-width: 236px;
     margin-bottom: 40px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
+      background-color: $white;
+      color: $blue;
+      
+      &::placeholder {
+        color: $blue;
+      }
     }
 
     &::placeholder {
@@ -90,8 +97,15 @@
     margin-bottom: 39px;
     resize: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
+      background-color: $white;
+      color: $blue;
+      
+      &::placeholder {
+        color: $blue;
+      }
     }
 
     &::placeholder {
@@ -118,9 +132,19 @@
     margin-left: 3px;
     margin-right: 37px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
+      background-color: $white;
+      color: $blue;
     }
+  }
+
+  textarea,
+  input[type="text"],
+  input[type="tel"] {
+    appearance: none;
+    border-radius: 0;
   }
 }
 
@@ -130,6 +154,7 @@
   padding-left: 32px;
 
   &:focus-within {
+    opacity: 1;
     outline: 1px solid $black;
   }
 
@@ -142,6 +167,7 @@
 
     &:hover {
       cursor: pointer;
+      opacity: 1;
     }
   }
 

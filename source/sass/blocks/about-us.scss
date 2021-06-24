@@ -1,9 +1,9 @@
 .about-us {
-  background: url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
+  background: url("../img/year.png") 20.5% 850px no-repeat,
+    url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
     url("../img/triangle-left-bottom.svg") 0 114% no-repeat,
     url("../img/triangle-center.svg") 54.2% 38% no-repeat,
-    url("../img/triangle-right.svg") 99.3% 47% no-repeat,
-    url("../img/year.png") 20.5% 89.9% no-repeat;
+    url("../img/triangle-right.svg") 99.3% 47% no-repeat;
 
   .container {
     padding-top: 112px;
@@ -39,12 +39,11 @@
 }
 
 .about-us__list-item {
-  height: 163px;
   width: 485px;
   border: 1px solid $grey-special;
   border-left: 3px solid $blue;
   margin-bottom: 29px;
-  padding: 95px 40px 40px 41px;
+  padding: 95px 40px 48px 41px;
 
   &:nth-child(n + 1) {
     margin-right: 30px;
@@ -97,6 +96,11 @@
       cursor: pointer;
     }
   }
+
+  &--three,
+  &--four {
+    padding-bottom: 72px;
+  }
 }
 
 .about-us__text-wrap {
@@ -139,34 +143,50 @@
     border-radius: 5px;
     padding: 14px 50px;
     background-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  p > span + span {
+    display: none;
+  }
+
+  p > span {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 22px;
+    color: $grey;
   }
 }
 
 @media (min-resolution: 2dppx) {
   .about-us {
-    background: url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
+    background: url("../img/year@2x.png") 20.5% 850px no-repeat,
+      url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
       url("../img/triangle-left-bottom.svg") 0 114% no-repeat,
       url("../img/triangle-center.svg") 54.2% 38% no-repeat,
-      url("../img/triangle-right.svg") 99.3% 47% no-repeat,
-      url("../img/year@2x.png") 20.5% 89.9%/contain contain no-repeat;
+      url("../img/triangle-right.svg") 99.3% 47% no-repeat;
   }
 }
 
 @media (min-width: $desktop-width) and (max-width: $desctop-content-width - 1px) {
   .about-us__list-item {
-    height: 269px;
     width: 335px;
   }
 }
 
 @media (max-width: $desktop-width - 1px) {
   .about-us {
-    background: url("../img/triangle-center.svg") -202.6% 38% no-repeat,
-      url("../img/year-tablet.png") 0 90% no-repeat;
+    background: url("../img/year-tablet.png") 0 676px no-repeat,
+      url("../img/triangle-center.svg") -202.6% 38% no-repeat;
 
     .container {
       padding-top: 54px;
-      padding-bottom: 20px;
+      padding-bottom: 83px;
     }
 
     ul {
@@ -192,9 +212,8 @@
   }
 
   .about-us__list-item {
-    height: 214px;
     width: 289px;
-    padding: 66px 28px 24px 25px;
+    padding: 66px 28px 4px 25px;
     border-left-width: 2px;
 
     &:nth-child(2n) {
@@ -218,7 +237,6 @@
     }
 
     &--three {
-      height: 141px;
       background: $white url("../img/detective.svg") 25px 27px/31px 26px no-repeat;
 
       &:hover {
@@ -231,12 +249,16 @@
     }
 
     &--four {
-      height: 141px;
       background: $white url("../img/tag.svg") 25px 24px no-repeat;
 
       &:hover {
         background: $blue url("../img/tag-hover.svg") 25px 24px no-repeat;
       }
+    }
+
+    &--three,
+    &--four {
+      padding-bottom: 20px;
     }
   }
 
@@ -257,43 +279,27 @@
       margin-bottom: 19px;
     }
 
-    &::before {
-      position: absolute;
-      content: "..";
-      display: flex;
-      width: 20px;
-      height: 20px;
-      color: $grey;
-      background-color: $white;
-      left: 697px;
-      top: 244px;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 550px;
-      height: 70px;
-      background-color: $white;
-      left: 150px;
-      bottom: 75px;
-    }
-
-    a {
-      position: relative;
-      top: -62px;
-      z-index: 1;
-    }
-
-    p {
+    p + p {
       width: 532px;
+      margin-bottom: 30px;
+    }
+
+    p > span {
+      display: none;
+    }
+
+    p > span + span {
+      display: inline-block;
+      position: relative;
+      left: -10px;
+      top: -2px;
     }
   }
 
   @media (min-resolution: 2dppx) {
     .about-us {
-      background: url("../img/triangle-center.svg") -202.6% 38% no-repeat,
-        url("../img/year-tablet@2x.png") 0 90%/contain contain no-repeat;
+      background: url("../img/year-tablet@2x.png") 0 676px no-repeat,
+      url("../img/triangle-center.svg") -202.6% 38% no-repeat;
     }
   }
 }
@@ -304,8 +310,7 @@
 
     .container {
       padding-top: 37px;
-      padding-bottom: 0;
-      margin-bottom: -55px;
+      padding-bottom: 63px;
     }
 
     span {
@@ -324,9 +329,8 @@
   }
 
   .about-us__list-item {
-    height: 212px;
     width: 100%;
-    padding: 72px 28px 24px 25px;
+    padding: 72px 28px 8px 25px;
     border-left-width: 2px;
     margin-bottom: 20px;
 
@@ -345,13 +349,13 @@
     }
 
     &--two {
-      height: 216px;
       padding-top: 68px;
+      padding-bottom: 12px;
     }
 
     &--three {
-      height: 144px;
       padding-top: 62px;
+      padding-bottom: 42px;
       background-position: 24px 24px;
 
       &:hover {
@@ -364,8 +368,8 @@
     }
 
     &--four {
-      height: 150px;
       padding-top: 68px;
+      padding-bottom: 4px;
 
       span {
         margin-bottom: 18px;
@@ -382,11 +386,10 @@
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
-    height: 602px;
-    overflow-x: hidden;
 
     p {
       width: 100%;
+      margin-right: 0;
     }
 
     h2 {
@@ -394,6 +397,9 @@
       line-height: 39px;
       letter-spacing: -0.01em;
       margin-bottom: 20px;
+      position: relative;
+      left: -2px;
+      z-index: 1;
     }
 
     h2 + p {
@@ -402,35 +408,13 @@
     }
 
     p + p {
-      height: 186px;
-    }
-
-    &::before {
-      width: 200px;
-      right: -45px;
-      left: auto;
-      top: auto;
-      bottom: 195px;
-    }
-
-    &::after {
-      height: 100px;
-      bottom: 90px;
-      width: 100%;
-      left: 0;
+      width: auto;
+      margin-bottom: 20px;
     }
 
     a {
       top: auto;
       bottom: 20px;
-    }
-  }
-}
-
-@media (min-width: 507px) and (max-width: $table-width - 1) {
-  .about-us__text-wrap {
-    &::before {
-      display: none;
     }
   }
 }

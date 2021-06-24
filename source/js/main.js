@@ -119,7 +119,7 @@ headerFeedbackLinkElement.addEventListener('click', (evt) => {
     headerInputTypeTextElement.focus();
   } else if (storageName && !storagePhone && !storageQuestion) {
     headerInputTypeTextElement.value = storageName;
-    headerInputTypeTelElement.focus();
+    headerInputTypeTextElement.focus();
   } else if (!storageName && storagePhone && !storageQuestion) {
     headerInputTypeTelElement.value = storagePhone;
     headerInputTypeTextElement.focus();
@@ -129,7 +129,7 @@ headerFeedbackLinkElement.addEventListener('click', (evt) => {
   } else if (storageName && storagePhone && !storageQuestion) {
     headerInputTypeTextElement.value = storageName;
     headerInputTypeTelElement.value = storagePhone;
-    headerTextareaElement.focus();
+    headerInputTypeTextElement.focus();
   } else if (!storageName && storagePhone && storageQuestion) {
     headerInputTypeTelElement.value = storagePhone;
     headerTextareaElement.value = storageQuestion;
@@ -137,11 +137,12 @@ headerFeedbackLinkElement.addEventListener('click', (evt) => {
   } else if (storageName && !storagePhone && storageQuestion) {
     headerInputTypeTextElement.value = storageName;
     headerTextareaElement.value = storageQuestion;
-    headerInputTypeTelElement.focus();
+    headerInputTypeTextElement.focus();
   } else {
     headerInputTypeTextElement.value = storageName;
     headerInputTypeTelElement.value = storagePhone;
     headerTextareaElement.value = storageQuestion;
+    headerInputTypeTextElement.focus();
   }
 });
 
