@@ -194,3 +194,11 @@ window.addEventListener('click', (evt) => {
     bodyElement.classList.remove('body--modal-open');
   }
 });
+
+headerInputTypeTelElement.addEventListener('click', () => {
+  headerInputTypeTelElement.setSelectionRange(4, 4);
+});
+
+inputTypeTelElement.addEventListener('click', () => {
+  inputTypeTelElement.setSelectionRange(4, 4);
+});

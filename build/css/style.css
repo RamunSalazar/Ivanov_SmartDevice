@@ -153,7 +153,11 @@ main {
   border: 1px solid #ffffff;
   border-radius: 5px;
   padding: 13px 26px;
-  margin-left: 48px; }
+  position: relative;
+  left: 2px;
+  margin-left: 48px;
+  min-width: 128px;
+  min-height: 18px; }
   .header__feedback-link:hover, .header__feedback-link:focus {
     background-color: #00b2ff;
     border: 1px solid #00b2ff; }
@@ -165,7 +169,12 @@ main {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding-top: 5px;
+  padding-top: 4px; }
+
+.header__contact-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: end;
@@ -435,6 +444,13 @@ main {
       cursor: pointer;
       background-color: #ffffff;
       color: #00b2ff; }
+  .header__modal textarea,
+  .header__modal input[type="text"],
+  .header__modal input[type="tel"] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 0; }
 
 .header__check-wrap {
   padding-left: 50px;
@@ -484,7 +500,7 @@ main {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .header {
-    background: url("../img/triangle-group.svg") 0 0 no-repeat, #1b2d37 url("../img/header-background-desktop@2x.png") 0 0 no-repeat; } }
+    background: url("../img/triangle-group.svg") 0 0 no-repeat, #1b2d37 url("../img/header-background-desktop@2x.png") 0 0/1920px 878px no-repeat; } }
 
 @media (min-width: 1024px) and (max-width: 1599px) {
   .header {
@@ -554,7 +570,6 @@ main {
         width: 26px;
         height: 18px;
         background-size: contain;
-        top: -3px;
         left: auto; }
   .header__feedback-link {
     display: none; }
@@ -605,7 +620,7 @@ main {
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
   .header {
-    background: url("../img/triangle-group-tablet.svg") 0 0 no-repeat, #1b2d37 url("../img/header-background-tablet@2x.png") 0 0 no-repeat;
+    background: url("../img/triangle-group-tablet.svg") 0 0 no-repeat, #1b2d37 url("../img/header-background-tablet@2x.png") 0 0/770px 686px no-repeat;
     background-size: 100%; } }
 
 @media (max-width: 767px) {
@@ -687,7 +702,7 @@ main {
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
   .header {
-    background: url("../img/triangle-group-mobile.svg") 0 0 no-repeat, #1b2d37 url("../img/header-background-mobile@2x.png") 0 0 no-repeat;
+    background: url("../img/triangle-group-mobile.svg") 0 0 no-repeat, #1b2d37 url("../img/header-background-mobile@2x.png") 0 0/320px 647px no-repeat;
     background-size: 100%; } }
 
 .footer {
@@ -892,13 +907,6 @@ main {
     left: 2px; }
   .footer::after {
     bottom: 54px; }
-  .footer::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: rgba(98, 105, 98, 0.2);
-    bottom: 78.2%; }
   .footer__logo {
     left: auto;
     top: -13px;
@@ -907,7 +915,16 @@ main {
     grid-column: 3/4;
     grid-row: 1/2;
     width: 130px;
-    margin-bottom: 72px; }
+    margin-bottom: 72px;
+    position: relative; }
+    .footer__social-links::before {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 1px;
+      background-color: rgba(98, 105, 98, 0.2);
+      left: -634px;
+      bottom: -34px; }
   .footer__nav-wrap {
     grid-column: 1/2;
     grid-row: 2/3;
@@ -992,6 +1009,8 @@ main {
     width: 111px; }
     .footer__social-links li:nth-child(3n) {
       margin-right: 0; }
+    .footer__social-links::before {
+      display: none; }
   .footer__nav-wrap {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
@@ -1095,10 +1114,10 @@ main {
       display: block; } }
 
 .about-us {
-  background: url("../img/year.png") 20.5% 850px no-repeat, url("../img/triangle-left-top.svg") 12.9% 5% no-repeat, url("../img/triangle-left-bottom.svg") 0 114% no-repeat, url("../img/triangle-center.svg") 54.2% 38% no-repeat, url("../img/triangle-right.svg") 99.3% 47% no-repeat; }
+  background: url("../img/triangle-left-top.svg") 12.9% 5% no-repeat, url("../img/triangle-left-bottom.svg") 0 114% no-repeat, url("../img/triangle-center.svg") 54.2% 38% no-repeat, url("../img/triangle-right.svg") 99.3% 47% no-repeat; }
   .about-us .container {
     padding-top: 112px;
-    padding-bottom: 109px; }
+    padding-bottom: 99px; }
   .about-us ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1168,7 +1187,9 @@ main {
 
 .about-us__text-wrap {
   padding-left: 310px;
-  padding-right: 120px; }
+  padding-right: 120px;
+  padding-bottom: 10px;
+  background: url("../img/year.png") 99px 5px no-repeat; }
   .about-us__text-wrap h2 {
     font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 400;
@@ -1209,8 +1230,8 @@ main {
     color: #666666; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .about-us {
-    background: url("../img/year@2x.png") 20.5% 850px no-repeat, url("../img/triangle-left-top.svg") 12.9% 5% no-repeat, url("../img/triangle-left-bottom.svg") 0 114% no-repeat, url("../img/triangle-center.svg") 54.2% 38% no-repeat, url("../img/triangle-right.svg") 99.3% 47% no-repeat; } }
+  .about-us__text-wrap {
+    background: url("../img/year@2x.png") 99px 5px/220px 317px no-repeat; } }
 
 @media (min-width: 1024px) and (max-width: 1599px) {
   .about-us__list-item {
@@ -1218,10 +1239,11 @@ main {
 
 @media (max-width: 1023px) {
   .about-us {
-    background: url("../img/year-tablet.png") 0 676px no-repeat, url("../img/triangle-center.svg") -202.6% 38% no-repeat; }
+    background: url("../img/triangle-center.svg") -202.6% 38% no-repeat; }
     .about-us .container {
       padding-top: 54px;
-      padding-bottom: 83px; }
+      padding-bottom: 58px;
+      background: none; }
     .about-us ul {
       margin-left: auto;
       margin-right: auto;
@@ -1264,7 +1286,9 @@ main {
   .about-us__text-wrap {
     padding-left: 188px;
     padding-right: 0;
-    position: relative; }
+    padding-bottom: 25px;
+    position: relative;
+    background: url("../img/year-tablet.png") -25px -3px no-repeat; }
     .about-us__text-wrap h2 {
       font-size: 32px;
       line-height: 45px;
@@ -1285,8 +1309,8 @@ main {
       top: -2px; } }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
-  .about-us {
-    background: url("../img/year-tablet@2x.png") 0 676px no-repeat, url("../img/triangle-center.svg") -202.6% 38% no-repeat; } }
+  .about-us__text-wrap {
+    background: url("../img/year-tablet@2x.png") -25px -3px/244px 362px no-repeat; } }
 
 @media (max-width: 767px) {
   .about-us {
@@ -1335,7 +1359,8 @@ main {
     left: auto;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0; }
+    padding-left: 0;
+    background: none; }
     .about-us__text-wrap p {
       width: 100%;
       margin-right: 0; }
@@ -1348,8 +1373,7 @@ main {
       left: -2px;
       z-index: 1; }
     .about-us__text-wrap h2 + p {
-      margin-bottom: 41px;
-      height: 132px; }
+      margin-bottom: 41px; }
     .about-us__text-wrap p + p {
       width: auto;
       margin-bottom: 20px; }
@@ -1736,7 +1760,7 @@ main {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .feedback {
-    background: url("../img/triangle-group.svg") -855px -178px no-repeat, url("../img/feedback-triangle-top.svg") 100.25% 10.2% no-repeat, url("../img/plane.png") 25.15% 42.2% no-repeat, #00b2ff url("../img/feedback-triangle-bottom.svg") 101.1% 108.3% no-repeat; } }
+    background: url("../img/triangle-group.svg") -855px -178px no-repeat, url("../img/feedback-triangle-top.svg") 100.25% 10.2% no-repeat, url("../img/plane@2x.png") 25.15% 42.2%/511px 288px no-repeat, #00b2ff url("../img/feedback-triangle-bottom.svg") 101.1% 108.3% no-repeat; } }
 
 @media (min-width: 1024px) and (max-width: 1599px) {
   .feedback {

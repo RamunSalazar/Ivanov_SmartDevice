@@ -1,13 +1,12 @@
 .about-us {
-  background: url("../img/year.png") 20.5% 850px no-repeat,
-    url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
+  background: url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
     url("../img/triangle-left-bottom.svg") 0 114% no-repeat,
     url("../img/triangle-center.svg") 54.2% 38% no-repeat,
     url("../img/triangle-right.svg") 99.3% 47% no-repeat;
 
   .container {
     padding-top: 112px;
-    padding-bottom: 109px;
+    padding-bottom: 99px;
   }
 
   ul {
@@ -106,6 +105,8 @@
 .about-us__text-wrap {
   padding-left: 310px;
   padding-right: 120px;
+  padding-bottom: 10px;
+  background: url("../img/year.png") 99px 5px no-repeat;
 
   h2 {
     font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -164,12 +165,8 @@
 }
 
 @media (min-resolution: 2dppx) {
-  .about-us {
-    background: url("../img/year@2x.png") 20.5% 850px no-repeat,
-      url("../img/triangle-left-top.svg") 12.9% 5% no-repeat,
-      url("../img/triangle-left-bottom.svg") 0 114% no-repeat,
-      url("../img/triangle-center.svg") 54.2% 38% no-repeat,
-      url("../img/triangle-right.svg") 99.3% 47% no-repeat;
+  .about-us__text-wrap {
+    background: url("../img/year@2x.png") 99px 5px/220px 317px no-repeat;
   }
 }
 
@@ -181,12 +178,12 @@
 
 @media (max-width: $desktop-width - 1px) {
   .about-us {
-    background: url("../img/year-tablet.png") 0 676px no-repeat,
-      url("../img/triangle-center.svg") -202.6% 38% no-repeat;
+    background: url("../img/triangle-center.svg") -202.6% 38% no-repeat;
 
     .container {
       padding-top: 54px;
-      padding-bottom: 83px;
+      padding-bottom: 58px;
+      background: none;
     }
 
     ul {
@@ -265,7 +262,9 @@
   .about-us__text-wrap {
     padding-left: 188px;
     padding-right: 0;
+    padding-bottom: 25px;
     position: relative;
+    background: url("../img/year-tablet.png") -25px -3px no-repeat;
 
     h2 {
       font-size: 32px;
@@ -297,9 +296,8 @@
   }
 
   @media (min-resolution: 2dppx) {
-    .about-us {
-      background: url("../img/year-tablet@2x.png") 0 676px no-repeat,
-      url("../img/triangle-center.svg") -202.6% 38% no-repeat;
+    .about-us__text-wrap {
+      background: url("../img/year-tablet@2x.png") -25px -3px/244px 362px no-repeat;
     }
   }
 }
@@ -386,6 +384,7 @@
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
+    background: none;
 
     p {
       width: 100%;
@@ -404,7 +403,6 @@
 
     h2 + p {
       margin-bottom: 41px;
-      height: 132px;
     }
 
     p + p {

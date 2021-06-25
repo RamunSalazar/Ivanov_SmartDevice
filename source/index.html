@@ -89,12 +89,14 @@
           </svg>
         </a>
         <div class="header__wrap">
-          <a class="header__link header__link--email" tabindex="1" href="mailto:info@sd.ru">
-            <span>info@sd.ru</span>
-          </a>
-          <a class="header__link header__link--phone" tabindex="2" href="tel:+74950005252">
-            <span>+7 (495) 000 52 52</span>
-          </a>
+          <div class="header__contact-wrap">
+            <a class="header__link header__link--email" tabindex="1" href="mailto:info@sd.ru">
+              <span>info@sd.ru</span>
+            </a>
+            <a class="header__link header__link--phone" tabindex="2" href="tel:+74950005252">
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </div>
           <a class="header__feedback-link" href="feedback.html" tabindex="3">Заказать звонок</a>
         </div>
       </div>
@@ -287,11 +289,11 @@
           <form method="post" action="https://echo.htmlacademy.ru">
             <div class="feedback__wrap feedback__name-wrap">
               <label class="visually-hidden" for="feedback-name"></label>
-              <input type="text" id="feedback-name" pattern="[а-яА-ЯёЁa-zA-Z]+" tabindex="10" placeholder="Имя">
+              <input type="text" id="feedback-name" pattern="[а-яА-ЯёЁa-zA-Z]+" tabindex="10" placeholder="Имя" required>
             </div>
             <div class="feedback__wrap feedback__phone-wrap">
               <label class="visually-hidden" for="feedback-phone"></label>
-              <input type="tel" id="feedback-phone" pattern="\+7\(\d{3}\)\d{7}" tabindex="11" maxlength="14" placeholder="Телефон">
+              <input type="tel" id="feedback-phone" pattern="\+7\(\d{3}\)\d{7}" tabindex="11" maxlength="14" placeholder="Телефон" required>
             </div>
             <div class="feedback__wrap feedback__question-wrap">
               <label for="feedback-question"></label>

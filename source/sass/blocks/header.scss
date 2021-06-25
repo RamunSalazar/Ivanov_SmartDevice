@@ -43,6 +43,7 @@
 
   &--phone {
     margin-left: 122px;
+
     &::before {
       width: 18px;
       height: 18px;
@@ -74,7 +75,11 @@
   border: 1px solid $white;
   border-radius: 5px;
   padding: 13px 26px;
+  position: relative;
+  left: 2px;
   margin-left: 48px;
+  min-width: 128px;
+  min-height: 18px;
 
   &:hover,
   &:focus {
@@ -86,7 +91,11 @@
 .header__wrap {
   display: flex;
   align-items: baseline;
-  padding-top: 5px;
+  padding-top: 4px;
+}
+
+.header__contact-wrap {
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
@@ -401,7 +410,7 @@
 
 @media (min-resolution: 2dppx) {
   .header {
-    background: url("../img/triangle-group.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-desktop@2x.png") 0 0 no-repeat;
+    background: url("../img/triangle-group.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-desktop@2x.png") 0 0/1920px 878px no-repeat;
   }
 }
 
@@ -503,7 +512,6 @@
         width: 26px;
         height: 18px;
         background-size: contain;
-        top: -3px;
         left: auto;
       }
     }
@@ -577,7 +585,7 @@
 
   @media (min-resolution: 2dppx) {
     .header {
-      background: url("../img/triangle-group-tablet.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-tablet@2x.png") 0 0 no-repeat;
+      background: url("../img/triangle-group-tablet.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-tablet@2x.png") 0 0/770px 686px no-repeat;
       background-size: 100%;
     }
   }
@@ -696,7 +704,7 @@
 
   @media (min-resolution: 2dppx) {
     .header {
-      background: url("../img/triangle-group-mobile.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-mobile@2x.png") 0 0 no-repeat;
+      background: url("../img/triangle-group-mobile.svg") 0 0 no-repeat, $dark-grey url("../img/header-background-mobile@2x.png") 0 0/320px 647px no-repeat;
       background-size: 100%;
     }
   }
